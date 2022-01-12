@@ -4,84 +4,84 @@
 
 class_NvM NvM;
 
-void class_NvM::InitFunction(void){
+FUNC(void, NVM_CODE) class_NvM::InitFunction(void){
 }
 
-void class_NvM::MainFunction(void){
+FUNC(void, NVM_CODE) class_NvM::MainFunction(void){
    //EcuM.CB_NotifyNvMJobEnd();
 }
 
-void class_NvM::SetDataIndex(void){
+FUNC(void, NVM_CODE) class_NvM::SetDataIndex(void){
 }
 
-void class_NvM::GetDataIndex(void){
+FUNC(void, NVM_CODE) class_NvM::GetDataIndex(void){
 }
 
-void class_NvM::SetBlockProtection(void){
+FUNC(void, NVM_CODE) class_NvM::SetBlockProtection(void){
 }
 
-void class_NvM::GetErrorStatus(void){
+FUNC(void, NVM_CODE) class_NvM::GetErrorStatus(void){
 }
 
-void class_NvM::GetVersionInfo(void){
+FUNC(void, NVM_CODE) class_NvM::GetVersionInfo(void){
 }
 
-void class_NvM::SetRamBlockStatus(void){
+FUNC(void, NVM_CODE) class_NvM::SetRamBlockStatus(void){
 }
 
-void class_NvM::SetBlockLockStatus(void){
+FUNC(void, NVM_CODE) class_NvM::SetBlockLockStatus(void){
 }
 
-void class_NvM::CancelJobs(void){
+FUNC(void, NVM_CODE) class_NvM::CancelJobs(void){
    MemIf.Cancel();
 }
 
-void class_NvM::ReadBlock(void){
+FUNC(void, NVM_CODE) class_NvM::ReadBlock(void){
    MemIf.Read();
 }
 
-void class_NvM::WriteBlock(void){
+FUNC(void, NVM_CODE) class_NvM::WriteBlock(void){
    MemIf.Write();
 }
 
-void class_NvM::RestoreBlockDefaults(void){
+FUNC(void, NVM_CODE) class_NvM::RestoreBlockDefaults(void){
 }
 
-void class_NvM::EraseNvBlock(void){
+FUNC(void, NVM_CODE) class_NvM::EraseNvBlock(void){
 }
 
-void class_NvM::CancelWriteAll(void){
+FUNC(void, NVM_CODE) class_NvM::CancelWriteAll(void){
    MemIf.Cancel();
 }
 
-void class_NvM::InvalidateNvBlock(void){
+FUNC(void, NVM_CODE) class_NvM::InvalidateNvBlock(void){
 }
 
-void class_NvM::ReadPRAMBlock(void){
+FUNC(void, NVM_CODE) class_NvM::ReadPRAMBlock(void){
    MemIf.Read();
 }
 
-void class_NvM::WritePRAMBlock(void){
+FUNC(void, NVM_CODE) class_NvM::WritePRAMBlock(void){
    MemIf.Write();
 }
 
-void class_NvM::RestorePRAMBlockDefaults(void){
+FUNC(void, NVM_CODE) class_NvM::RestorePRAMBlockDefaults(void){
 }
 
-void class_NvM::ReadAll(void){
+FUNC(void, NVM_CODE) class_NvM::ReadAll(void){
    MemIf.Read();
 }
 
-void class_NvM::WriteAll(void){
+FUNC(void, NVM_CODE) class_NvM::WriteAll(void){
    MemIf.Write();
 }
 
-void class_NvM::ValidateAll(void){
+FUNC(void, NVM_CODE) class_NvM::ValidateAll(void){
 }
 
-void class_NvM::JobEndNotification(void){
+FUNC(void, NVM_CODE) class_NvM::JobEndNotification(void){
 }
 
-void class_NvM::JobErrorNotification(void){
+FUNC(void, NVM_CODE) class_NvM::JobErrorNotification(void){
 }
 
