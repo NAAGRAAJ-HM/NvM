@@ -10,6 +10,8 @@
 
 #include "MemIf.h"
 
+#include "NvM_EcuM.h"
+
 /*****************************************************/
 /* #DEFINES                                          */
 /*****************************************************/
@@ -33,12 +35,14 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
+class_NvM_EcuM NvM_EcuM;
+class_EcuM_Client *EcuM_Client_ptr_NvM = &NvM_EcuM;
 class_NvM NvM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, NVM_CODE) class_NvM::InitFunction(void){
+FUNC(void, NVM_CODE) class_NvM_EcuM::InitFunction(void){
 }
 
 FUNC(void, NVM_CODE) class_NvM::MainFunction(void){
