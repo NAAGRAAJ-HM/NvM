@@ -11,6 +11,7 @@
 #include "MemIf.h"
 
 #include "NvM_EcuM.h"
+#include "NvM_SchM.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
@@ -37,6 +38,8 @@
 /*****************************************************/
 class_NvM_EcuM NvM_EcuM;
 class_EcuM_Client *EcuM_Client_ptr_NvM = &NvM_EcuM;
+class_NvM_SchM NvM_SchM;
+class_SchM_Client *SchM_Client_ptr_NvM = &NvM_SchM;
 class_NvM NvM;
 
 /*****************************************************/
@@ -45,7 +48,7 @@ class_NvM NvM;
 FUNC(void, NVM_CODE) class_NvM_EcuM::InitFunction(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM::MainFunction(void){
+FUNC(void, NVM_CODE) class_NvM_SchM::MainFunction(void){
    //EcuM.CB_NotifyNvMJobEnd();
 }
 
