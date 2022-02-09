@@ -36,20 +36,21 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-class_NvM_EcuM NvM_EcuM;
-class_EcuM_Client *EcuM_Client_ptr_NvM = &NvM_EcuM;
-class_NvM_SchM NvM_SchM;
-class_SchM_Client *SchM_Client_ptr_NvM = &NvM_SchM;
+interface_NvM_EcuM_Init NvM_EcuM_Init;
+interface_NvM_SchM_Main NvM_SchM_Main;
 class_NvM NvM;
+
+interface_EcuM_Init_Client *EcuM_Init_Client_ptr_NvM = &NvM_EcuM_Init;
+interface_SchM_Main_Client *SchM_Main_Client_ptr_NvM = &NvM_SchM_Main;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, NVM_CODE) class_NvM_EcuM::InitFunction(void){
+FUNC(void, NVM_CODE) interface_NvM_EcuM_Init::InitFunction(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM_SchM::MainFunction(void){
-   //EcuM.CB_NotifyNvMJobEnd();
+FUNC(void, NVM_CODE) interface_NvM_SchM_Main::MainFunction(void){
+   //EcuM_Init.CB_NotifyNvMJobEnd();
 }
 
 FUNC(void, NVM_CODE) class_NvM::SetDataIndex(void){
