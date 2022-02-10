@@ -6,12 +6,9 @@
 /*****************************************************/
 /* #INCLUDES                                         */
 /*****************************************************/
-#include "NvM.h"
+#include "module.h"
 
-#include "MemIf.h"
-
-#include "NvM_EcuM.h"
-#include "NvM_SchM.h"
+#include "NvM_Unused.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
@@ -24,6 +21,12 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
+class module_NvM : public class_module{
+   public:
+      FUNC(void, NVM_CODE) InitFunction   (void);
+      FUNC(void, NVM_CODE) DeInitFunction (void);
+      FUNC(void, NVM_CODE) MainFunction   (void);
+};
 
 /*****************************************************/
 /* CONSTS                                            */
@@ -36,95 +39,95 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-interface_NvM_EcuM_Init NvM_EcuM_Init;
-interface_NvM_SchM_Main NvM_SchM_Main;
-class_NvM NvM;
+module_NvM NvM;
 
-interface_EcuM_Init_Client *EcuM_Init_Client_ptr_NvM = &NvM_EcuM_Init;
-interface_SchM_Main_Client *SchM_Main_Client_ptr_NvM = &NvM_SchM_Main;
+interface_EcuM_Client *EcuM_Client_ptr_NvM = &NvM;
+interface_SchM_Client *SchM_Client_ptr_NvM = &NvM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, NVM_CODE) interface_NvM_EcuM_Init::InitFunction(void){
+FUNC(void, NVM_CODE) module_NvM::InitFunction(void){
 }
 
-FUNC(void, NVM_CODE) interface_NvM_SchM_Main::MainFunction(void){
-   //EcuM_Init.CB_NotifyNvMJobEnd();
+FUNC(void, NVM_CODE) module_NvM::MainFunction(void){
+   //EcuM.CB_NotifyNvMJobEnd();
 }
 
-FUNC(void, NVM_CODE) class_NvM::SetDataIndex(void){
+#include "MemIf.h"
+
+FUNC(void, NVM_CODE) class_NvM_Unused::SetDataIndex(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM::GetDataIndex(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::GetDataIndex(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM::SetBlockProtection(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::SetBlockProtection(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM::GetErrorStatus(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::GetErrorStatus(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM::GetVersionInfo(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::GetVersionInfo(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM::SetRamBlockStatus(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::SetRamBlockStatus(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM::SetBlockLockStatus(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::SetBlockLockStatus(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM::CancelJobs(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::CancelJobs(void){
    MemIf.Cancel();
 }
 
-FUNC(void, NVM_CODE) class_NvM::ReadBlock(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::ReadBlock(void){
    MemIf.Read();
 }
 
-FUNC(void, NVM_CODE) class_NvM::WriteBlock(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::WriteBlock(void){
    MemIf.Write();
 }
 
-FUNC(void, NVM_CODE) class_NvM::RestoreBlockDefaults(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::RestoreBlockDefaults(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM::EraseNvBlock(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::EraseNvBlock(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM::CancelWriteAll(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::CancelWriteAll(void){
    MemIf.Cancel();
 }
 
-FUNC(void, NVM_CODE) class_NvM::InvalidateNvBlock(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::InvalidateNvBlock(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM::ReadPRAMBlock(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::ReadPRAMBlock(void){
    MemIf.Read();
 }
 
-FUNC(void, NVM_CODE) class_NvM::WritePRAMBlock(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::WritePRAMBlock(void){
    MemIf.Write();
 }
 
-FUNC(void, NVM_CODE) class_NvM::RestorePRAMBlockDefaults(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::RestorePRAMBlockDefaults(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM::ReadAll(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::ReadAll(void){
    MemIf.Read();
 }
 
-FUNC(void, NVM_CODE) class_NvM::WriteAll(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::WriteAll(void){
    MemIf.Write();
 }
 
-FUNC(void, NVM_CODE) class_NvM::ValidateAll(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::ValidateAll(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM::JobEndNotification(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::JobEndNotification(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM::JobErrorNotification(void){
+FUNC(void, NVM_CODE) class_NvM_Unused::JobErrorNotification(void){
 }
 
 /*****************************************************/
