@@ -7,7 +7,8 @@
 /* #INCLUDES                                         */
 /*****************************************************/
 #include "module.h"
-
+#include "NvM_EcuM.h"
+#include "NvM_SchM.h"
 #include "NvM_Unused.h"
 
 /*****************************************************/
@@ -21,7 +22,11 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class module_NvM : public class_module{
+class module_NvM:
+      public abstract_module
+   ,  public interface_NvM_EcuM
+   ,  public interface_NvM_SchM
+{
    public:
       FUNC(void, NVM_CODE) InitFunction   (void);
       FUNC(void, NVM_CODE) DeInitFunction (void);
@@ -41,13 +46,16 @@ class module_NvM : public class_module{
 /*****************************************************/
 module_NvM NvM;
 
-interface_EcuM_Client *EcuM_Client_ptr_NvM = &NvM;
-interface_SchM_Client *SchM_Client_ptr_NvM = &NvM;
+interface_NvM_EcuM *EcuM_Client_ptr_NvM = &NvM;
+interface_NvM_SchM *SchM_Client_ptr_NvM = &NvM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
 FUNC(void, NVM_CODE) module_NvM::InitFunction(void){
+}
+
+FUNC(void, NVM_CODE) module_NvM::DeInitFunction(void){
 }
 
 FUNC(void, NVM_CODE) module_NvM::MainFunction(void){

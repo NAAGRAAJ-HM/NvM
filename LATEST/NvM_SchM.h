@@ -22,7 +22,7 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class class_NvM_SchM : public class_SchM_Client{
+class interface_NvM_SchM : public interface_SchM_Client{
    public:
 /*****************************************************/
 /* FUNCTIONS                                         */
@@ -41,7 +41,7 @@ class class_NvM_SchM : public class_SchM_Client{
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern class_SchM_Client *SchM_Client_ptr_NvM;
+extern interface_NvM_SchM *SchM_Client_ptr_NvM;
 
 /*****************************************************/
 /* EOF                                               */
