@@ -62,7 +62,7 @@ FUNC(void, NVM_CODE) module_NvM::MainFunction(void){
    //EcuM.CB_NotifyNvMJobEnd();
 }
 
-#include "MemIf.h"
+#include "MemIf_NvM.h"
 
 FUNC(void, NVM_CODE) class_NvM_Unused::SetDataIndex(void){
 }
