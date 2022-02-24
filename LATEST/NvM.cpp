@@ -86,15 +86,15 @@ FUNC(void, NVM_CODE) class_NvM_Unused::SetBlockLockStatus(void){
 }
 
 FUNC(void, NVM_CODE) class_NvM_Unused::CancelJobs(void){
-   MemIf.Cancel();
+   NvM_Client_ptr_MemIf->Cancel();
 }
 
 FUNC(void, NVM_CODE) class_NvM_Unused::ReadBlock(void){
-   MemIf.Read();
+   NvM_Client_ptr_MemIf->Read();
 }
 
 FUNC(void, NVM_CODE) class_NvM_Unused::WriteBlock(void){
-   MemIf.Write();
+   NvM_Client_ptr_MemIf->Write();
 }
 
 FUNC(void, NVM_CODE) class_NvM_Unused::RestoreBlockDefaults(void){
@@ -104,29 +104,29 @@ FUNC(void, NVM_CODE) class_NvM_Unused::EraseNvBlock(void){
 }
 
 FUNC(void, NVM_CODE) class_NvM_Unused::CancelWriteAll(void){
-   MemIf.Cancel();
+   NvM_Client_ptr_MemIf->Cancel();
 }
 
 FUNC(void, NVM_CODE) class_NvM_Unused::InvalidateNvBlock(void){
 }
 
 FUNC(void, NVM_CODE) class_NvM_Unused::ReadPRAMBlock(void){
-   MemIf.Read();
+   NvM_Client_ptr_MemIf->Read();
 }
 
 FUNC(void, NVM_CODE) class_NvM_Unused::WritePRAMBlock(void){
-   MemIf.Write();
+   NvM_Client_ptr_MemIf->Write();
 }
 
 FUNC(void, NVM_CODE) class_NvM_Unused::RestorePRAMBlockDefaults(void){
 }
 
 FUNC(void, NVM_CODE) class_NvM_Unused::ReadAll(void){
-   MemIf.Read();
+   NvM_Client_ptr_MemIf->Read();
 }
 
 FUNC(void, NVM_CODE) class_NvM_Unused::WriteAll(void){
-   MemIf.Write();
+   NvM_Client_ptr_MemIf->Write();
 }
 
 FUNC(void, NVM_CODE) class_NvM_Unused::ValidateAll(void){
