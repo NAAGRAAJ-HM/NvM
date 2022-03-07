@@ -24,8 +24,6 @@
 /*****************************************************/
 class module_NvM:
       public abstract_module
-   ,  public interface_NvM_EcuM
-   ,  public interface_NvM_SchM
 {
    public:
       FUNC(void, NVM_CODE) InitFunction   (void);
@@ -44,10 +42,9 @@ class module_NvM:
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-module_NvM NvM;
-
-interface_NvM_EcuM *EcuM_Client_ptr_NvM = &NvM;
-interface_NvM_SchM *SchM_Client_ptr_NvM = &NvM;
+module_NvM     NvM;
+infEcuMClient* gptrinfEcuMClient_NvM = &NvM;
+infSchMClient* gptrinfSchMClient_NvM = &NvM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
