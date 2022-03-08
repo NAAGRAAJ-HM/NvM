@@ -32,7 +32,7 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern interface_NvM_SchM *SchM_Client_ptr_NvM;
+extern infSchMClient *gptrinfSchMClient_NvM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
