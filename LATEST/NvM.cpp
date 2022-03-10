@@ -7,8 +7,8 @@
 /* #INCLUDES                                         */
 /*****************************************************/
 #include "module.h"
-#include "NvM_EcuM.h"
-#include "NvM_SchM.h"
+#include "infNvM_EcuM.h"
+#include "infNvM_SchM.h"
 #include "NvM_Unused.h"
 
 /*****************************************************/
@@ -28,6 +28,7 @@ class module_NvM:
    public:
       FUNC(void, NVM_CODE) InitFunction   (void);
       FUNC(void, NVM_CODE) DeInitFunction (void);
+      FUNC(void, NVM_CODE) GetVersionInfo (void);
       FUNC(void, NVM_CODE) MainFunction   (void);
 };
 
@@ -44,6 +45,7 @@ class module_NvM:
 /*****************************************************/
 module_NvM     NvM;
 infEcuMClient* gptrinfEcuMClient_NvM = &NvM;
+infDcmClient*  gptrinfDcmClient_NvM  = &NvM;
 infSchMClient* gptrinfSchMClient_NvM = &NvM;
 
 /*****************************************************/
@@ -53,6 +55,9 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(void){
 }
 
 FUNC(void, NVM_CODE) module_NvM::DeInitFunction(void){
+}
+
+FUNC(void, NVM_CODE) module_NvM::GetVersionInfo(void){
 }
 
 FUNC(void, NVM_CODE) module_NvM::MainFunction(void){
