@@ -1,6 +1,6 @@
 #pragma once
 /*****************************************************/
-/* File   : NvM_EcuM.h                               */
+/* File   : infNvM_SchM.h                            */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
@@ -32,7 +32,7 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern infEcuMClient* gptrinfEcuMClient_NvM;
+extern infSchMClient* gptrinfSchMClient_NvM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
