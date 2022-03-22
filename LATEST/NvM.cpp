@@ -7,7 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.h"
-#include "infNvM_Version.h"
+#include "NvM_Cfg.h"
 #include "infNvM_EcuM.h"
 #include "infNvM_Dcm.h"
 #include "infNvM_SchM.h"
@@ -15,10 +15,19 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
+#define NVM_AR_RELEASE_MAJOR_VERSION                                           4
+#define NVM_AR_RELEASE_MINOR_VERSION                                           3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
+#if(NVM_AR_RELEASE_MAJOR_VERSION != STD_AR_RELEASE_MAJOR_VERSION)
+   #error "Incompatible NVM_AR_RELEASE_MAJOR_VERSION!"
+#endif
+
+#if(NVM_AR_RELEASE_MINOR_VERSION != STD_AR_RELEASE_MINOR_VERSION)
+   #error "Incompatible NVM_AR_RELEASE_MINOR_VERSION!"
+#endif
 
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
@@ -61,6 +70,11 @@ FUNC(void, NVM_CODE) module_NvM::DeInitFunction(void){
 }
 
 FUNC(void, NVM_CODE) module_NvM::GetVersionInfo(void){
+#if(STD_ON == NvM_DevErrorDetect)
+//TBD: API parameter check
+   Det_ReportError(
+   );
+#endif
 }
 
 FUNC(void, NVM_CODE) module_NvM::MainFunction(void){
