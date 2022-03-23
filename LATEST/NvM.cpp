@@ -40,6 +40,16 @@ class module_NvM:
       FUNC(void, NVM_CODE) DeInitFunction (void);
       FUNC(void, NVM_CODE) GetVersionInfo (void);
       FUNC(void, NVM_CODE) MainFunction   (void);
+
+   private:
+      CONST(Std_TypeVersionInfo, NVM_CONST) VersionInfo = {
+            0x0000
+         ,  0xFFFF
+         ,  0x01
+         ,  '0'
+         ,  '1'
+         ,  '0'
+      };
 };
 
 /******************************************************************************/
