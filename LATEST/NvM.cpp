@@ -7,7 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.h"
-#include "NvM_Cfg.h"
+#include "CfgNvM.h"
 #include "infNvM_EcuM.h"
 #include "infNvM_Dcm.h"
 #include "infNvM_SchM.h"
