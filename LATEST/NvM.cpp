@@ -6,11 +6,11 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "module.h"
-#include "CfgNvM.h"
-#include "infNvM_EcuM.h"
-#include "infNvM_Dcm.h"
-#include "infNvM_SchM.h"
+#include "module.hpp"
+#include "CfgNvM.hpp"
+#include "infNvM_EcuM.hpp"
+#include "infNvM_Dcm.hpp"
+#include "infNvM_SchM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -91,7 +91,7 @@ FUNC(void, NVM_CODE) module_NvM::MainFunction(void){
    //EcuM.CB_NotifyNvMJobEnd();
 }
 
-#include "NvM_Unused.h"
+#include "NvM_Unused.hpp"
 
 FUNC(void, NVM_CODE) class_NvM_Unused::SetDataIndex(void){
 }
@@ -111,7 +111,7 @@ FUNC(void, NVM_CODE) class_NvM_Unused::SetRamBlockStatus(void){
 FUNC(void, NVM_CODE) class_NvM_Unused::SetBlockLockStatus(void){
 }
 
-#include "infMemIf_NvM.h"
+#include "infMemIf_NvM.hpp"
 
 FUNC(void, NVM_CODE) class_NvM_Unused::CancelJobs(void){
    gptrinfMemIf_NvM->Cancel();
