@@ -7,7 +7,6 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.hpp"
-#include "CfgNvM.hpp"
 #include "infNvM_EcuM.hpp"
 #include "infNvM_Dcm.hpp"
 #include "infNvM_SchM.hpp"
@@ -36,37 +35,40 @@ class module_NvM:
       public abstract_module
 {
    public:
+      module_NvM(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
+      }
       FUNC(void, NVM_CODE) InitFunction   (void);
       FUNC(void, NVM_CODE) DeInitFunction (void);
-      FUNC(void, NVM_CODE) GetVersionInfo (void);
       FUNC(void, NVM_CODE) MainFunction   (void);
-
-   private:
-      CONST(Std_TypeVersionInfo, NVM_CONST) VersionInfo = {
-            0x0000
-         ,  0xFFFF
-         ,  0x01
-         ,  '0'
-         ,  '1'
-         ,  '0'
-      };
 };
+
+extern VAR(module_NvM, NVM_VAR) NvM;
 
 /******************************************************************************/
 /* CONSTS                                                                     */
 /******************************************************************************/
+CONSTP2VAR(infEcuMClient, NVM_VAR, NVM_CONST) gptrinfEcuMClient_NvM = &NvM;
+CONSTP2VAR(infDcmClient,  NVM_VAR, NVM_CONST) gptrinfDcmClient_NvM  = &NvM;
+CONSTP2VAR(infSchMClient, NVM_VAR, NVM_CONST) gptrinfSchMClient_NvM = &NvM;
 
 /******************************************************************************/
 /* PARAMS                                                                     */
 /******************************************************************************/
+#include "CfgNvM.hpp"
 
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_NvM, NVM_VAR) NvM;
-CONSTP2VAR(infEcuMClient, NVM_VAR, NVM_CONST) gptrinfEcuMClient_NvM = &NvM;
-CONSTP2VAR(infDcmClient,  NVM_VAR, NVM_CONST) gptrinfDcmClient_NvM  = &NvM;
-CONSTP2VAR(infSchMClient, NVM_VAR, NVM_CONST) gptrinfSchMClient_NvM = &NvM;
+VAR(module_NvM, NVM_VAR) NvM(
+   {
+         0x0000
+      ,  0xFFFF
+      ,  0x01
+      ,  '0'
+      ,  '1'
+      ,  '0'
+   }
+);
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
@@ -77,14 +79,6 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(void){
 
 FUNC(void, NVM_CODE) module_NvM::DeInitFunction(void){
    NvM.IsInitDone = E_NOT_OK;
-}
-
-FUNC(void, NVM_CODE) module_NvM::GetVersionInfo(void){
-#if(STD_ON == NvM_DevErrorDetect)
-//TBD: API parameter check
-   Det_ReportError(
-   );
-#endif
 }
 
 FUNC(void, NVM_CODE) module_NvM::MainFunction(void){
