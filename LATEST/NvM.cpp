@@ -78,6 +78,7 @@ VAR(module_NvM, NVM_VAR) NvM(
 FUNC(void, NVM_CODE) module_NvM::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, NVM_CONFIG_DATA, NVM_APPL_CONST) lptrCfgModule
 ){
+#if(STD_ON == NvM_InitCheck)
    if(E_OK == IsInitDone){
 #if(STD_ON == NvM_DevErrorDetect)
       Det_ReportError(
@@ -85,6 +86,7 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
 #endif
    }
    else{
+#endif
       if(NULL_PTR == lptrCfgModule){
 #if(STD_ON == NvM_DevErrorDetect)
          Det_ReportError(
@@ -96,10 +98,13 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
 // use PBcfg_NvM as back-up configuration
       }
       IsInitDone = E_OK;
+#if(STD_ON == NvM_InitCheck)
    }
+#endif
 }
 
 FUNC(void, NVM_CODE) module_NvM::DeInitFunction(void){
+#if(STD_ON == NvM_InitCheck)
    if(E_OK != IsInitDone){
 #if(STD_ON == NvM_DevErrorDetect)
       Det_ReportError(
@@ -107,12 +112,27 @@ FUNC(void, NVM_CODE) module_NvM::DeInitFunction(void){
 #endif
    }
    else{
+#endif
       IsInitDone = E_NOT_OK;
+#if(STD_ON == NvM_InitCheck)
    }
+#endif
 }
 
 FUNC(void, NVM_CODE) module_NvM::MainFunction(void){
-   //EcuM.CB_NotifyNvMJobEnd();
+#if(STD_ON == NvM_InitCheck)
+   if(E_OK != IsInitDone){
+#if(STD_ON == NvM_DevErrorDetect)
+      Det_ReportError(
+      );
+#endif
+   }
+   else{
+#endif
+      //EcuM.CB_NotifyNvMJobEnd();
+#if(STD_ON == NvM_InitCheck)
+   }
+#endif
 }
 
 class class_NvM_Unused{
