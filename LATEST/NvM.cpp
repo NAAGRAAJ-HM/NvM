@@ -14,18 +14,18 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define NVM_AR_RELEASE_MAJOR_VERSION                                           4
-#define NVM_AR_RELEASE_MINOR_VERSION                                           3
+#define NVM_AR_RELEASE_VERSION_MAJOR                                           4
+#define NVM_AR_RELEASE_VERSION_MINOR                                           3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(NVM_AR_RELEASE_MAJOR_VERSION != STD_AR_RELEASE_MAJOR_VERSION)
-   #error "Incompatible NVM_AR_RELEASE_MAJOR_VERSION!"
+#if(NVM_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
+   #error "Incompatible NVM_AR_RELEASE_VERSION_MAJOR!"
 #endif
 
-#if(NVM_AR_RELEASE_MINOR_VERSION != STD_AR_RELEASE_MINOR_VERSION)
-   #error "Incompatible NVM_AR_RELEASE_MINOR_VERSION!"
+#if(NVM_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
+   #error "Incompatible NVM_AR_RELEASE_VERSION_MINOR!"
 #endif
 
 /******************************************************************************/
@@ -63,8 +63,10 @@ CONSTP2VAR(infSchMClient, NVM_VAR, NVM_CONST) gptrinfSchMClient_NvM = &NvM;
 /******************************************************************************/
 VAR(module_NvM, NVM_VAR) NvM(
    {
-         0x0000
-      ,  0xFFFF
+         NVM_AR_RELEASE_VERSION_MAJOR
+      ,  NVM_AR_RELEASE_VERSION_MINOR
+      ,  0x00
+      ,  0xFF
       ,  0x01
       ,  '0'
       ,  '1'
