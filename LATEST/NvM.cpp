@@ -101,8 +101,8 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
             lptrCfg = lptrCfgModule;
          }
          else{
-// use PBcfg_CanIf as back-up configuration
-            lptrCfg = PBcfg_CanIf;
+// use PBcfgCanIf as back-up configuration
+            lptrCfg = &PBcfgNvM;
          }
       }
       IsInitDone = E_OK;
