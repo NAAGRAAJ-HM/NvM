@@ -31,8 +31,34 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class class_NvM_Functionality{
+   public:
+      FUNC(void, NVM_CODE) SetDataIndex             (void);
+      FUNC(void, NVM_CODE) GetDataIndex             (void);
+      FUNC(void, NVM_CODE) SetBlockProtection       (void);
+      FUNC(void, NVM_CODE) GetErrorStatus           (void);
+      FUNC(void, NVM_CODE) SetRamBlockStatus        (void);
+      FUNC(void, NVM_CODE) SetBlockLockStatus       (void);
+      FUNC(void, NVM_CODE) CancelJobs               (void);
+      FUNC(void, NVM_CODE) ReadBlock                (void);
+      FUNC(void, NVM_CODE) WriteBlock               (void);
+      FUNC(void, NVM_CODE) RestoreBlockDefaults     (void);
+      FUNC(void, NVM_CODE) EraseNvBlock             (void);
+      FUNC(void, NVM_CODE) CancelWriteAll           (void);
+      FUNC(void, NVM_CODE) InvalidateNvBlock        (void);
+      FUNC(void, NVM_CODE) ReadPRAMBlock            (void);
+      FUNC(void, NVM_CODE) WritePRAMBlock           (void);
+      FUNC(void, NVM_CODE) RestorePRAMBlockDefaults (void);
+      FUNC(void, NVM_CODE) ReadAll                  (void);
+      FUNC(void, NVM_CODE) WriteAll                 (void);
+      FUNC(void, NVM_CODE) ValidateAll              (void);
+      FUNC(void, NVM_CODE) JobEndNotification       (void);
+      FUNC(void, NVM_CODE) JobErrorNotification     (void);
+};
+
 class module_NvM:
       public abstract_module
+   ,  public class_NvM_Functionality
 {
    public:
       module_NvM(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
@@ -84,6 +110,10 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
    if(E_OK == IsInitDone){
 #if(STD_ON == NvM_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -92,6 +122,10 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
       if(NULL_PTR == lptrCfgModule){
 #if(STD_ON == NvM_DevErrorDetect)
          Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
          );
 #endif
       }
@@ -116,6 +150,10 @@ FUNC(void, NVM_CODE) module_NvM::DeInitFunction(void){
    if(E_OK != IsInitDone){
 #if(STD_ON == NvM_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -132,6 +170,10 @@ FUNC(void, NVM_CODE) module_NvM::MainFunction(void){
    if(E_OK != IsInitDone){
 #if(STD_ON == NvM_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -143,102 +185,77 @@ FUNC(void, NVM_CODE) module_NvM::MainFunction(void){
 #endif
 }
 
-class class_NvM_Unused{
-   public:
-      FUNC(void, NVM_CODE) SetDataIndex             (void);
-      FUNC(void, NVM_CODE) GetDataIndex             (void);
-      FUNC(void, NVM_CODE) SetBlockProtection       (void);
-      FUNC(void, NVM_CODE) GetErrorStatus           (void);
-      FUNC(void, NVM_CODE) SetRamBlockStatus        (void);
-      FUNC(void, NVM_CODE) SetBlockLockStatus       (void);
-      FUNC(void, NVM_CODE) CancelJobs               (void);
-      FUNC(void, NVM_CODE) ReadBlock                (void);
-      FUNC(void, NVM_CODE) WriteBlock               (void);
-      FUNC(void, NVM_CODE) RestoreBlockDefaults     (void);
-      FUNC(void, NVM_CODE) EraseNvBlock             (void);
-      FUNC(void, NVM_CODE) CancelWriteAll           (void);
-      FUNC(void, NVM_CODE) InvalidateNvBlock        (void);
-      FUNC(void, NVM_CODE) ReadPRAMBlock            (void);
-      FUNC(void, NVM_CODE) WritePRAMBlock           (void);
-      FUNC(void, NVM_CODE) RestorePRAMBlockDefaults (void);
-      FUNC(void, NVM_CODE) ReadAll                  (void);
-      FUNC(void, NVM_CODE) WriteAll                 (void);
-      FUNC(void, NVM_CODE) ValidateAll              (void);
-      FUNC(void, NVM_CODE) JobEndNotification       (void);
-      FUNC(void, NVM_CODE) JobErrorNotification     (void);
-};
-
-FUNC(void, NVM_CODE) class_NvM_Unused::SetDataIndex(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::SetDataIndex(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::GetDataIndex(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::GetDataIndex(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::SetBlockProtection(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::SetBlockProtection(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::GetErrorStatus(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::GetErrorStatus(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::SetRamBlockStatus(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::SetRamBlockStatus(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::SetBlockLockStatus(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::SetBlockLockStatus(void){
 }
 
 #include "infMemIf_NvM.hpp"
 
-FUNC(void, NVM_CODE) class_NvM_Unused::CancelJobs(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::CancelJobs(void){
    gptrinfMemIf_NvM->Cancel();
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::ReadBlock(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::ReadBlock(void){
    gptrinfMemIf_NvM->Read();
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::WriteBlock(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::WriteBlock(void){
    gptrinfMemIf_NvM->Write();
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::RestoreBlockDefaults(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::RestoreBlockDefaults(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::EraseNvBlock(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::EraseNvBlock(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::CancelWriteAll(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::CancelWriteAll(void){
    gptrinfMemIf_NvM->Cancel();
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::InvalidateNvBlock(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::InvalidateNvBlock(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::ReadPRAMBlock(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::ReadPRAMBlock(void){
    gptrinfMemIf_NvM->Read();
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::WritePRAMBlock(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::WritePRAMBlock(void){
    gptrinfMemIf_NvM->Write();
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::RestorePRAMBlockDefaults(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::RestorePRAMBlockDefaults(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::ReadAll(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::ReadAll(void){
    gptrinfMemIf_NvM->Read();
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::WriteAll(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::WriteAll(void){
    gptrinfMemIf_NvM->Write();
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::ValidateAll(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::ValidateAll(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::JobEndNotification(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::JobEndNotification(void){
 }
 
-FUNC(void, NVM_CODE) class_NvM_Unused::JobErrorNotification(void){
+FUNC(void, NVM_CODE) class_NvM_Functionality::JobErrorNotification(void){
 }
 
 /******************************************************************************/
