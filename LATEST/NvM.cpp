@@ -7,6 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
+#include "NvM_core.hpp"
 #include "infNvM_EcuM.hpp"
 #include "infNvM_Dcm.hpp"
 #include "infNvM_SchM.hpp"
