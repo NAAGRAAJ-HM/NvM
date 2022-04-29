@@ -12,7 +12,7 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define NVM_COREFUNCTIONALITIES                                                \
+#define NVM_CORE_FUNCTIONALITIES                                               \
               FUNC(void, NVM_CODE) SetDataIndex             (void);            \
               FUNC(void, NVM_CODE) GetDataIndex             (void);            \
               FUNC(void, NVM_CODE) SetBlockProtection       (void);            \
@@ -35,7 +35,7 @@
               FUNC(void, NVM_CODE) JobEndNotification       (void);            \
               FUNC(void, NVM_CODE) JobErrorNotification     (void);            \
 
-#define NVM_COREFUNCTIONALITIES_VIRTUAL                                        \
+#define NVM_CORE_FUNCTIONALITIES_VIRTUAL                                       \
       virtual FUNC(void, NVM_CODE) SetDataIndex             (void) = 0;        \
       virtual FUNC(void, NVM_CODE) GetDataIndex             (void) = 0;        \
       virtual FUNC(void, NVM_CODE) SetBlockProtection       (void) = 0;        \
@@ -67,7 +67,7 @@
 /******************************************************************************/
 class class_NvM_Functionality{
    public:
-      NVM_COREFUNCTIONALITIES_VIRTUAL
+      NVM_CORE_FUNCTIONALITIES_VIRTUAL
 };
 
 /******************************************************************************/

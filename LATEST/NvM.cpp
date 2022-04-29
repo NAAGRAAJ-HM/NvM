@@ -7,10 +7,9 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
+#include "CfgNvM.hpp"
 #include "NvM_core.hpp"
-#include "infNvM_EcuM.hpp"
-#include "infNvM_Dcm.hpp"
-#include "infNvM_SchM.hpp"
+#include "infNvM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -44,6 +43,7 @@ class module_NvM:
       );
       FUNC(void, NVM_CODE) DeInitFunction (void);
       FUNC(void, NVM_CODE) MainFunction   (void);
+      NVM_CORE_FUNCTIONALITIES
 };
 
 extern VAR(module_NvM, NVM_VAR) NvM;
@@ -58,7 +58,6 @@ CONSTP2VAR(infSchMClient, NVM_VAR, NVM_CONST) gptrinfSchMClient_NvM = &NvM;
 /******************************************************************************/
 /* PARAMS                                                                     */
 /******************************************************************************/
-#include "CfgNvM.hpp"
 
 /******************************************************************************/
 /* OBJECTS                                                                    */
