@@ -113,7 +113,7 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  NVM_E_UNINIT
       );
 #endif
    }
@@ -133,7 +133,7 @@ FUNC(void, NVM_CODE) module_NvM::DeInitFunction(void){
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  NVM_E_UNINIT
       );
 #endif
    }
@@ -152,7 +152,7 @@ FUNC(void, NVM_CODE) module_NvM::MainFunction(void){
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  NVM_E_UNINIT
       );
 #endif
 #if(STD_ON == NvM_InitCheck)
