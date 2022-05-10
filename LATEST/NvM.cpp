@@ -89,7 +89,10 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, NVM_CONFIG_DATA, NVM_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == NvM_InitCheck)
-   if(E_OK != IsInitDone){
+   if(
+         E_OK
+      != IsInitDone
+   ){
 #endif
       if(NULL_PTR != lptrCfgModule){
          if(STD_HIGH){
@@ -127,7 +130,10 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
 
 FUNC(void, NVM_CODE) module_NvM::DeInitFunction(void){
 #if(STD_ON == NvM_InitCheck)
-   if(E_OK == IsInitDone){
+   if(
+         E_OK
+      == IsInitDone
+   ){
 #endif
 #if(STD_ON == NvM_InitCheck)
       IsInitDone = E_NOT_OK;
@@ -147,7 +153,10 @@ FUNC(void, NVM_CODE) module_NvM::DeInitFunction(void){
 
 FUNC(void, NVM_CODE) module_NvM::MainFunction(void){
 #if(STD_ON == NvM_InitCheck)
-   if(E_OK == IsInitDone){
+   if(
+         E_OK
+      == IsInitDone
+   ){
 #endif
       //EcuM.CB_NotifyNvMJobEnd();
    }
