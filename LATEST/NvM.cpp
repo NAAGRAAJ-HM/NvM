@@ -9,7 +9,7 @@
 #include "Module.hpp"
 #include "CfgNvM.hpp"
 #include "NvM_core.hpp"
-#include "infNvM.hpp"
+#include "infNvM_Exp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -32,6 +32,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_NvM:
+   INTERFACES_EXPORTED_NVM
       public abstract_module
    ,  public class_NvM_Functionality
 {
