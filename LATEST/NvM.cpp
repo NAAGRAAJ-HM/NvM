@@ -32,7 +32,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_NvM:
-   INTERFACES_EXPORTED_NVM
+      INTERFACES_EXPORTED_NVM
       public abstract_module
    ,  public class_NvM_Functionality
 {
