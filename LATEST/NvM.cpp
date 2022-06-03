@@ -10,6 +10,7 @@
 #include "CfgNvM.hpp"
 #include "NvM_core.hpp"
 #include "infNvM_Exp.hpp"
+#include "infNvM_Imp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
