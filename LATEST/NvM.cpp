@@ -74,7 +74,7 @@ CONSTP2VAR(infSchMClient, NVM_VAR, NVM_CONST) gptrinfSchMClient_NvM = &NvM;
 VAR(module_NvM, NVM_VAR) NvM(
    {
 #if(STD_ON == _ReSIM)
-// char strModuleName[6];
+   char strModuleName[6] = "NVM";
 #else
 #endif
          NVM_AR_RELEASE_VERSION_MAJOR
