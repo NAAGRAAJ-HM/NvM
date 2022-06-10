@@ -73,10 +73,6 @@ CONSTP2VAR(infSchMClient, NVM_VAR, NVM_CONST) gptrinfSchMClient_NvM = &NvM;
 /******************************************************************************/
 VAR(module_NvM, NVM_VAR) NvM(
    {
-#if(STD_ON == _ReSIM)
-         "NvM",
-#else
-#endif
          NVM_AR_RELEASE_VERSION_MAJOR
       ,  NVM_AR_RELEASE_VERSION_MINOR
       ,  0x00
