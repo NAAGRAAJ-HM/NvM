@@ -82,12 +82,7 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
    ){
 #endif
       if(NULL_PTR != lptrCfgModule){
-         if(STD_HIGH){
-            lptrCfg = lptrCfgModule;
-         }
-         else{
-            lptrCfg = &PBcfgNvM;
-         }
+         lptrCfg = lptrCfgModule;
       }
       else{
 #if(STD_ON == NvM_DevErrorDetect)
