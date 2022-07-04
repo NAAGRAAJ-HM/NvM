@@ -72,6 +72,8 @@ VAR(module_NvM, NVM_VAR) NvM;
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
+#include <cstring>
+#include "CfgGen.hpp"
 FUNC(void, NVM_CODE) module_NvM::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, NVM_CONFIG_DATA, NVM_APPL_CONST) lptrCfgModule
 ){
@@ -94,6 +96,22 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
          );
 #endif
       }
+
+      if(FALSE){
+         memcpy(
+               (      void*)&CfgGen_NvM
+            ,  (const void*)&CfgGen_Fls
+            ,  sizeof(CfgGen_Type)
+         );
+      }
+      else{
+         memcpy(
+               (      void*)&CfgGen_NvM
+            ,  (const void*)&PBcfgGen_ROM
+            ,  sizeof(CfgGen_Type)
+         );
+      }
+
 #if(STD_ON == NvM_InitCheck)
       IsInitDone = E_OK;
    }
