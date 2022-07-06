@@ -7,9 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
-#include "CfgNvM.hpp"
-#include "NvM_core.hpp"
-#include "infNvM_Exp.hpp"
+#include "NvM.hpp"
 #include "infNvM_Imp.hpp"
 
 /******************************************************************************/
@@ -32,26 +30,6 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
-class module_NvM:
-      INTERFACES_EXPORTED_NVM
-      public abstract_module
-   ,  public class_NvM_Functionality
-{
-   private:
-/******************************************************************************/
-/* OBJECTS                                                                    */
-/******************************************************************************/
-
-   public:
-      FUNC(void, NVM_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, NVM_CONFIG_DATA, NVM_APPL_CONST) lptrCfgModule
-      );
-      FUNC(void, NVM_CODE) DeInitFunction (void);
-      FUNC(void, NVM_CODE) MainFunction   (void);
-      NVM_CORE_FUNCTIONALITIES
-};
-
-extern VAR(module_NvM, NVM_VAR) NvM;
 
 /******************************************************************************/
 /* CONSTS                                                                     */
