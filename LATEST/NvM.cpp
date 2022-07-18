@@ -87,6 +87,60 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
          );
       }
 
+#if(STD_ON == _ReSIM)
+      cout<<endl<<"CfgAdc";
+      cout<<endl<<"CfgBswM";
+      cout<<endl<<"CfgCan";
+      cout<<endl<<"CfgCanIf";
+      cout<<endl<<"CfgCanNm";
+      cout<<endl<<"CfgCanSm";
+      cout<<endl<<"CfgCanTp";
+      cout<<endl<<"CfgCom";
+      cout<<endl<<"CfgComM";
+      cout<<endl<<"CfgCry";
+      cout<<endl<<"CfgCryIf";
+      cout<<endl<<"CfgCsm";
+      cout<<endl<<"CfgDem";
+      cout<<endl<<"CfgDet";
+      cout<<endl<<"CfgDio";
+      cout<<endl<<"CfgDlt";
+      cout<<endl<<"CfgEa";
+      cout<<endl<<"CfgEcuM";
+      cout<<endl<<"CfgEep";
+      cout<<endl<<"CfgEth";
+      cout<<endl<<"CfgEthIf";
+      cout<<endl<<"CfgFee";
+      cout<<endl<<"CfgFiM";
+      cout<<endl<<"CfgFls";
+      cout<<endl<<"CfgFr";
+      cout<<endl<<"CfgFrIf";
+      cout<<endl<<"CfgFrNm";
+      cout<<endl<<"CfgFrTp";
+      cout<<endl<<"CfgGpt";
+      cout<<endl<<"CfgIcu";
+      cout<<endl<<"CfgIpduM";
+      cout<<endl<<"CfgJ1939Tp";
+      cout<<endl<<"CfgLin";
+      cout<<endl<<"CfgLinIf";
+      cout<<endl<<"CfgLinTp";
+      cout<<endl<<"CfgMcu";
+      cout<<endl<<"CfgMemIf";
+      cout<<endl<<"CfgNm";
+      cout<<endl<<"CfgNvM";
+      cout<<endl<<"CfgOcu";
+      cout<<endl<<"CfgOs";
+      cout<<endl<<"CfgPort";
+      cout<<endl<<"CfgPwm";
+      cout<<endl<<"CfgRte";
+      cout<<endl<<"CfgSecOC";
+      cout<<endl<<"CfgSokFm";
+      cout<<endl<<"CfgSpi";
+      cout<<endl<<"CfgStartUp";
+      cout<<endl<<"CfgStbM";
+      cout<<endl<<"CfgSwcApplFoc";
+#else
+#endif
+
 #if(STD_ON == NvM_InitCheck)
       IsInitDone = E_OK;
    }
