@@ -48,7 +48,9 @@ VAR(module_NvM, NVM_VAR) NvM;
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
 #include <cstring>
+#include "Const.hpp"
 #include "CfgGen.hpp"
+
 FUNC(void, NVM_CODE) module_NvM::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, NVM_CONFIG_DATA, NVM_APPL_CONST) lptrCfgModule
 ){
@@ -703,6 +705,7 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
       printf("\nCfgGen_NvM.CfgDcm.VersionInfo.u8SwVersionMajor           = 0x%2.2X", CfgGen_NvM.CfgDcm.VersionInfo.u8SwVersionMajor);
       printf("\nCfgGen_NvM.CfgDcm.VersionInfo.u8SwVersionMinor           = 0x%2.2X", CfgGen_NvM.CfgDcm.VersionInfo.u8SwVersionMinor);
       printf("\nCfgGen_NvM.CfgDcm.VersionInfo.u8SwVersionPatch           = 0x%2.2X", CfgGen_NvM.CfgDcm.VersionInfo.u8SwVersionPatch);
+/*
       for(
          uint8 u8IndexLoop = 0;
                u8IndexLoop < 59;
@@ -710,6 +713,7 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
       ){
          printf("\nCfgGen_NvM.CfgDcm.aptrDcmClients[%2.2d] = %p", u8IndexLoop, (void*)CfgGen_NvM.CfgDcm.aptrDcmClients[u8IndexLoop]);
       }
+*/
 
       cout<<endl<<endl<<"CfgPduR";
       printf("\nCfgGen_NvM.CfgPduR.bDevErrorDetect                        = %d", CfgGen_NvM.CfgPduR.bDevErrorDetect);
@@ -873,19 +877,19 @@ FUNC(void, NVM_CODE) module_NvM::SetBlockLockStatus(
 FUNC(void, NVM_CODE) module_NvM::CancelJobs(
    void
 ){
-   ((CfgNvM_Type*)lptrCfg)->ptrinfMemIf_NvM->Cancel();
+   lptrConstNvM->ptrinfMemIf_NvM->Cancel();
 }
 
 FUNC(void, NVM_CODE) module_NvM::ReadBlock(
    void
 ){
-   ((CfgNvM_Type*)lptrCfg)->ptrinfMemIf_NvM->Read();
+   lptrConstNvM->ptrinfMemIf_NvM->Read();
 }
 
 FUNC(void, NVM_CODE) module_NvM::WriteBlock(
    void
 ){
-   ((CfgNvM_Type*)lptrCfg)->ptrinfMemIf_NvM->Write();
+   lptrConstNvM->ptrinfMemIf_NvM->Write();
 }
 
 FUNC(void, NVM_CODE) module_NvM::RestoreBlockDefaults(
@@ -901,7 +905,7 @@ FUNC(void, NVM_CODE) module_NvM::EraseNvBlock(
 FUNC(void, NVM_CODE) module_NvM::CancelWriteAll(
    void
 ){
-   ((CfgNvM_Type*)lptrCfg)->ptrinfMemIf_NvM->Cancel();
+   lptrConstNvM->ptrinfMemIf_NvM->Cancel();
 }
 
 FUNC(void, NVM_CODE) module_NvM::InvalidateNvBlock(
@@ -912,13 +916,13 @@ FUNC(void, NVM_CODE) module_NvM::InvalidateNvBlock(
 FUNC(void, NVM_CODE) module_NvM::ReadPRAMBlock(
    void
 ){
-   ((CfgNvM_Type*)lptrCfg)->ptrinfMemIf_NvM->Read();
+   lptrConstNvM->ptrinfMemIf_NvM->Read();
 }
 
 FUNC(void, NVM_CODE) module_NvM::WritePRAMBlock(
    void
 ){
-   ((CfgNvM_Type*)lptrCfg)->ptrinfMemIf_NvM->Write();
+   lptrConstNvM->ptrinfMemIf_NvM->Write();
 }
 
 FUNC(void, NVM_CODE) module_NvM::RestorePRAMBlockDefaults(
@@ -929,13 +933,13 @@ FUNC(void, NVM_CODE) module_NvM::RestorePRAMBlockDefaults(
 FUNC(void, NVM_CODE) module_NvM::ReadAll(
    void
 ){
-   ((CfgNvM_Type*)lptrCfg)->ptrinfMemIf_NvM->Read();
+   lptrConstNvM->ptrinfMemIf_NvM->Read();
 }
 
 FUNC(void, NVM_CODE) module_NvM::WriteAll(
    void
 ){
-   ((CfgNvM_Type*)lptrCfg)->ptrinfMemIf_NvM->Write();
+   lptrConstNvM->ptrinfMemIf_NvM->Write();
 }
 
 FUNC(void, NVM_CODE) module_NvM::ValidateAll(
@@ -956,4 +960,3 @@ FUNC(void, NVM_CODE) module_NvM::JobErrorNotification(
 /******************************************************************************/
 /* EOF                                                                        */
 /******************************************************************************/
-
