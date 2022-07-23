@@ -877,19 +877,19 @@ FUNC(void, NVM_CODE) module_NvM::SetBlockLockStatus(
 FUNC(void, NVM_CODE) module_NvM::CancelJobs(
    void
 ){
-   lptrConstNvM->ptrinfMemIf_NvM->Cancel();
+   lptrConst->ptrinfMemIf_NvM->Cancel();
 }
 
 FUNC(void, NVM_CODE) module_NvM::ReadBlock(
    void
 ){
-   lptrConstNvM->ptrinfMemIf_NvM->Read();
+   lptrConst->ptrinfMemIf_NvM->Read();
 }
 
 FUNC(void, NVM_CODE) module_NvM::WriteBlock(
    void
 ){
-   lptrConstNvM->ptrinfMemIf_NvM->Write();
+   lptrConst->ptrinfMemIf_NvM->Write();
 }
 
 FUNC(void, NVM_CODE) module_NvM::RestoreBlockDefaults(
@@ -905,7 +905,7 @@ FUNC(void, NVM_CODE) module_NvM::EraseNvBlock(
 FUNC(void, NVM_CODE) module_NvM::CancelWriteAll(
    void
 ){
-   lptrConstNvM->ptrinfMemIf_NvM->Cancel();
+   lptrConst->ptrinfMemIf_NvM->Cancel();
 }
 
 FUNC(void, NVM_CODE) module_NvM::InvalidateNvBlock(
@@ -916,13 +916,13 @@ FUNC(void, NVM_CODE) module_NvM::InvalidateNvBlock(
 FUNC(void, NVM_CODE) module_NvM::ReadPRAMBlock(
    void
 ){
-   lptrConstNvM->ptrinfMemIf_NvM->Read();
+   lptrConst->ptrinfMemIf_NvM->Read();
 }
 
 FUNC(void, NVM_CODE) module_NvM::WritePRAMBlock(
    void
 ){
-   lptrConstNvM->ptrinfMemIf_NvM->Write();
+   lptrConst->ptrinfMemIf_NvM->Write();
 }
 
 FUNC(void, NVM_CODE) module_NvM::RestorePRAMBlockDefaults(
@@ -933,13 +933,13 @@ FUNC(void, NVM_CODE) module_NvM::RestorePRAMBlockDefaults(
 FUNC(void, NVM_CODE) module_NvM::ReadAll(
    void
 ){
-   lptrConstNvM->ptrinfMemIf_NvM->Read();
+   lptrConst->ptrinfMemIf_NvM->Read();
 }
 
 FUNC(void, NVM_CODE) module_NvM::WriteAll(
    void
 ){
-   lptrConstNvM->ptrinfMemIf_NvM->Write();
+   lptrConst->ptrinfMemIf_NvM->Write();
 }
 
 FUNC(void, NVM_CODE) module_NvM::ValidateAll(
