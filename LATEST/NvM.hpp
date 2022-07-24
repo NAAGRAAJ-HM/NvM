@@ -32,14 +32,15 @@ class module_NvM:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-      const ConstNvM_Type* lptrConst;
+      const ConstNvM_Type* lptrConst = (ConstNvM_Type*)NULL_PTR;
 
    public:
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
       FUNC(void, NVM_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, NVM_CONFIG_DATA, NVM_APPL_CONST) lptrCfgModule
+            CONSTP2CONST(ConstModule_TypeAbstract, NVM_CONST,       NVM_APPL_CONST) lptrConstModule
+         ,  CONSTP2CONST(CfgModule_TypeAbstract,   NVM_CONFIG_DATA, NVM_APPL_CONST) lptrCfgModule
       );
       FUNC(void, NVM_CODE) DeInitFunction (void);
       FUNC(void, NVM_CODE) MainFunction   (void);

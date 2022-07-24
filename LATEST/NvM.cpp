@@ -52,7 +52,8 @@ VAR(module_NvM, NVM_VAR) NvM;
 #include "CfgGen.hpp"
 
 FUNC(void, NVM_CODE) module_NvM::InitFunction(
-   CONSTP2CONST(CfgModule_TypeAbstract, NVM_CONFIG_DATA, NVM_APPL_CONST) lptrCfgModule
+      CONSTP2CONST(ConstModule_TypeAbstract, NVM_CONST,       NVM_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   NVM_CONFIG_DATA, NVM_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == NvM_InitCheck)
    if(
@@ -60,8 +61,12 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
       != IsInitDone
    ){
 #endif
-      if(NULL_PTR != lptrCfgModule){
-         lptrCfg = lptrCfgModule;
+      if(
+            (NULL_PTR != lptrConstModule)
+         && (NULL_PTR != lptrCfgModule)
+      ){
+         lptrConst = lptrConstModule;
+         lptrCfg   = lptrCfgModule;
       }
       else{
 #if(STD_ON == NvM_DevErrorDetect)
