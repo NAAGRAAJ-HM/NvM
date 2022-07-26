@@ -65,7 +65,7 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
             (NULL_PTR != lptrConstModule)
          && (NULL_PTR != lptrCfgModule)
       ){
-         lptrConst = lptrConstModule;
+         lptrConst = (const ConstNvM_Type*)lptrConstModule;
          lptrCfg   = lptrCfgModule;
       }
       else{
