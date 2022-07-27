@@ -95,6 +95,7 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
       }
 
 #if(STD_ON == _ReSIM)
+/*
       cout<<endl<<endl<<"CfgAdc";
       printf("\nCfgGen_NvM.CfgAdc.bDevErrorDetect                         = %d", CfgGen_NvM.CfgAdc.bDevErrorDetect);
       printf("\nCfgGen_NvM.CfgAdc.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_NvM.CfgAdc.VersionInfo.u8ArVersionMajor);
@@ -710,16 +711,7 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
       printf("\nCfgGen_NvM.CfgDcm.VersionInfo.u8SwVersionMajor           = 0x%2.2X", CfgGen_NvM.CfgDcm.VersionInfo.u8SwVersionMajor);
       printf("\nCfgGen_NvM.CfgDcm.VersionInfo.u8SwVersionMinor           = 0x%2.2X", CfgGen_NvM.CfgDcm.VersionInfo.u8SwVersionMinor);
       printf("\nCfgGen_NvM.CfgDcm.VersionInfo.u8SwVersionPatch           = 0x%2.2X", CfgGen_NvM.CfgDcm.VersionInfo.u8SwVersionPatch);
-/*
-      for(
-         uint8 u8IndexLoop = 0;
-               u8IndexLoop < 59;
-               u8IndexLoop ++
-      ){
-         printf("\nCfgGen_NvM.CfgDcm.aptrDcmClients[%2.2d] = %p", u8IndexLoop, (void*)CfgGen_NvM.CfgDcm.aptrDcmClients[u8IndexLoop]);
-      }
 */
-
       cout<<endl<<endl<<"CfgPduR";
       printf("\nCfgGen_NvM.CfgPduR.bDevErrorDetect                        = %d", CfgGen_NvM.CfgPduR.bDevErrorDetect);
       printf("\nCfgGen_NvM.CfgPduR.VersionInfo.u8ArVersionMajor           = 0x%2.2X", CfgGen_NvM.CfgPduR.VersionInfo.u8ArVersionMajor);
@@ -756,6 +748,7 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
 //      printf("\nCfgGen_NvM.CfgPduR.Core.aptrGroups[0]->astGroup[0].ptrSrc   = 0x%p", CfgGen_NvM.CfgPduR.Core.aptrGroups[0]->astGroup[0].ptrSrc);
 //      printf("\nCfgGen_NvM.CfgPduR.Core.aptrGroups[0]->astGroup[0].ptrDst   = 0x%p", CfgGen_NvM.CfgPduR.Core.aptrGroups[0]->astGroup[0].ptrDst);
 
+/*
       cout<<endl<<endl<<"CfgSchM";
       printf("\nCfgGen_NvM.CfgSchM.bDevErrorDetect                        = %d", CfgGen_NvM.CfgSchM.bDevErrorDetect);
       printf("\nCfgGen_NvM.CfgSchM.VersionInfo.u8ArVersionMajor           = 0x%2.2X", CfgGen_NvM.CfgSchM.VersionInfo.u8ArVersionMajor);
@@ -777,7 +770,7 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
       printf("\nCfgGen_NvM.CfgSwcServiceEcuM.VersionInfo.u8SwVersionMajor = 0x%2.2X", CfgGen_NvM.CfgSwcServiceEcuM.VersionInfo.u8SwVersionMajor);
       printf("\nCfgGen_NvM.CfgSwcServiceEcuM.VersionInfo.u8SwVersionMinor = 0x%2.2X", CfgGen_NvM.CfgSwcServiceEcuM.VersionInfo.u8SwVersionMinor);
       printf("\nCfgGen_NvM.CfgSwcServiceEcuM.VersionInfo.u8SwVersionPatch = 0x%2.2X", CfgGen_NvM.CfgSwcServiceEcuM.VersionInfo.u8SwVersionPatch);
-
+*/
 #else
 #endif
 
