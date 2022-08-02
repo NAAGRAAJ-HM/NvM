@@ -734,6 +734,7 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
       printf("\nCfgGen_NvM.CfgWdgM.VersionInfo.u8SwVersionMinor           = 0x%2.2X", CfgGen_NvM.CfgWdgM.VersionInfo.u8SwVersionMinor);
       printf("\nCfgGen_NvM.CfgWdgM.VersionInfo.u8SwVersionPatch           = 0x%2.2X", CfgGen_NvM.CfgWdgM.VersionInfo.u8SwVersionPatch);
 */
+/*
       cout<<endl<<endl<<"CfgPduR";
       printf("\nCfgGen_NvM.CfgPduR.bDevErrorDetect                        = %d", CfgGen_NvM.CfgPduR.bDevErrorDetect);
       printf("\nCfgGen_NvM.CfgPduR.VersionInfo.u8ArVersionMajor           = 0x%2.2X", CfgGen_NvM.CfgPduR.VersionInfo.u8ArVersionMajor);
@@ -765,11 +766,13 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
       printf("\nCfgGen_NvM.CfgPduR.Core.aptrClients[0]->bUseTag                 = %d", CfgGen_NvM.CfgPduR.Core.aptrClients[0]->bUseTag);
       printf("\nCfgGen_NvM.CfgPduR.Core.u16CntMaxRoutingPathGroup         = 0x%4.4X", CfgGen_NvM.CfgPduR.Core.u16CntMaxRoutingPathGroup);
       printf("\nCfgGen_NvM.CfgPduR.Core.aptrGroups                        = 0x%p", (void*)CfgGen_NvM.CfgPduR.Core.aptrGroups);
+*/
 //      printf("\nCfgGen_NvM.CfgPduR.Core.aptrGroups[0]->Id                   = 0x%4.4X", CfgGen_NvM.CfgPduR.Core.aptrGroups[0]->Id);
 //      printf("\nCfgGen_NvM.CfgPduR.Core.aptrGroups[0]->u16CntMaxRoutingPath = 0x%4.4X", CfgGen_NvM.CfgPduR.Core.aptrGroups[0]->u16CntMaxRoutingPath);
 //      printf("\nCfgGen_NvM.CfgPduR.Core.aptrGroups[0]->astGroup[0].ptrSrc   = 0x%p", CfgGen_NvM.CfgPduR.Core.aptrGroups[0]->astGroup[0].ptrSrc);
 //      printf("\nCfgGen_NvM.CfgPduR.Core.aptrGroups[0]->astGroup[0].ptrDst   = 0x%p", CfgGen_NvM.CfgPduR.Core.aptrGroups[0]->astGroup[0].ptrDst);
 
+/*
       cout<<endl<<endl<<"CfgGen_NvM";
       for(
          uint16 u16IndexLoop = 0;
@@ -781,6 +784,7 @@ FUNC(void, NVM_CODE) module_NvM::InitFunction(
          }
          printf(" %2.2X", ((uint8*)&CfgGen_NvM)[u16IndexLoop]);
       }
+*/
 
 #else
 #endif
