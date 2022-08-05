@@ -13,18 +13,18 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define NVM_AR_RELEASE_VERSION_MAJOR                                           4
-#define NVM_AR_RELEASE_VERSION_MINOR                                           3
+#define SERVICENVM_AR_RELEASE_VERSION_MAJOR                                           4
+#define SERVICENVM_AR_RELEASE_VERSION_MINOR                                           3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(NVM_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
-   #error "Incompatible NVM_AR_RELEASE_VERSION_MAJOR!"
+#if(SERVICENVM_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
+   #error "Incompatible SERVICENVM_AR_RELEASE_VERSION_MAJOR!"
 #endif
 
-#if(NVM_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
-   #error "Incompatible NVM_AR_RELEASE_VERSION_MINOR!"
+#if(SERVICENVM_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
+   #error "Incompatible SERVICENVM_AR_RELEASE_VERSION_MINOR!"
 #endif
 
 /******************************************************************************/
@@ -42,7 +42,7 @@
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_ServiceNvM, NVM_VAR) ServiceNvM;
+VAR(module_ServiceNvM, SERVICENVM_VAR) ServiceNvM;
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
@@ -51,9 +51,9 @@ VAR(module_ServiceNvM, NVM_VAR) ServiceNvM;
 #include "Const.hpp"
 #include "Cfg.hpp"
 
-FUNC(void, NVM_CODE) module_ServiceNvM::InitFunction(
-      CONSTP2CONST(ConstModule_TypeAbstract, NVM_CONST,       NVM_APPL_CONST) lptrConstModule
-   ,  CONSTP2CONST(CfgModule_TypeAbstract,   NVM_CONFIG_DATA, NVM_APPL_CONST) lptrCfgModule
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::InitFunction(
+      CONSTP2CONST(ConstModule_TypeAbstract, SERVICENVM_CONST,       SERVICENVM_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   SERVICENVM_CONFIG_DATA, SERVICENVM_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == ServiceNvM_InitCheck)
    if(
@@ -580,16 +580,16 @@ FUNC(void, NVM_CODE) module_ServiceNvM::InitFunction(
       printf("\nCfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8SwVersionMinor);
       printf("\nCfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgCommonARA";
-      printf("\nCfgGen_ServiceNvM.CfgCommonARA.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgCommonARA.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgCommonARA.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgCommonARA.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgCommonARA.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgCommonARA.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgCommonARA.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgCommonARA.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgCommonARA.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgCommonARA.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgCommonARA.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgCommonARA.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgCommonARA.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgCommonARA.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgCommonARA.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgCommonARA.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgCommonARA.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgCommonARA.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"CfgProjectARA";
+      printf("\nCfgGen_ServiceNvM.CfgProjectARA.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgProjectARA.bDevErrorDetect);
+      printf("\nCfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8ArVersionMajor);
+      printf("\nCfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8ArVersionMinor);
+      printf("\nCfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8IDVendor);
+      printf("\nCfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8IDModule);
+      printf("\nCfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8IDInstance);
+      printf("\nCfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8SwVersionMajor);
+      printf("\nCfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8SwVersionMinor);
+      printf("\nCfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8SwVersionPatch);
 
       cout<<endl<<endl<<"CfgServiceSchM";
       printf("\nCfgGen_ServiceNvM.CfgServiceSchM.bDevErrorDetect                        = %d", CfgGen_ServiceNvM.CfgServiceSchM.bDevErrorDetect);
@@ -748,7 +748,7 @@ FUNC(void, NVM_CODE) module_ServiceNvM::InitFunction(
       printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.Id                                = 0x%4.4X", CfgGen_ServiceNvM.CfgServicePduR.Core.Id);
       printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bUpperModule            = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bUpperModule);
       printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bLowerModule            = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bLowerModule);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bServiceCommunicationInterface = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bServiceCommunicationInterface);
+      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCommunicationInterface = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCommunicationInterface);
       printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTransportProtocol      = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTransportProtocol);
       printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTransmit               = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTransmit);
       printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTransmitTp             = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTransmitTp);
@@ -756,8 +756,8 @@ FUNC(void, NVM_CODE) module_ServiceNvM::InitFunction(
       printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTxConfirmationTp       = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTxConfirmationTp);
       printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bRxIndication           = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bRxIndication);
       printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bRxIndicationTp         = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bRxIndicationTp);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bMcalCancelTransmit         = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bMcalCancelTransmit);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bMcalCancelReceive          = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bMcalCancelReceive);
+      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCancelTransmit         = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCancelTransmit);
+      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCancelReceive          = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCancelReceive);
       printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCopyTxData             = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCopyTxData);
       printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCopyRxData             = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCopyRxData);
       printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTriggerTransmit        = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTriggerTransmit);
@@ -798,14 +798,14 @@ FUNC(void, NVM_CODE) module_ServiceNvM::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  NVM_E_UNINIT
+         ,  SERVICENVM_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::DeInitFunction(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::DeInitFunction(
    void
 ){
 #if(STD_ON == ServiceNvM_InitCheck)
@@ -823,14 +823,14 @@ FUNC(void, NVM_CODE) module_ServiceNvM::DeInitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  NVM_E_UNINIT
+         ,  SERVICENVM_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::MainFunction(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::MainFunction(
    void
 ){
 #if(STD_ON == ServiceNvM_InitCheck)
@@ -847,7 +847,7 @@ FUNC(void, NVM_CODE) module_ServiceNvM::MainFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  NVM_E_UNINIT
+         ,  SERVICENVM_E_UNINIT
       );
 #endif
 #if(STD_ON == ServiceNvM_InitCheck)
@@ -855,117 +855,117 @@ FUNC(void, NVM_CODE) module_ServiceNvM::MainFunction(
 #endif
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::SetDataIndex(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::SetDataIndex(
    void
 ){
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::GetDataIndex(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::GetDataIndex(
    void
 ){
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::SetBlockProtection(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::SetBlockProtection(
    void
 ){
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::GetErrorStatus(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::GetErrorStatus(
    void
 ){
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::SetRamBlockStatus(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::SetRamBlockStatus(
    void
 ){
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::SetBlockLockStatus(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::SetBlockLockStatus(
    void
 ){
 }
 
 #include "infEcuabMemIf_ServiceNvM.hpp"
 
-FUNC(void, NVM_CODE) module_ServiceNvM::McalCancelJobs(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::McalCancelJobs(
    void
 ){
    lptrConst->ptrinfEcuabMemIf_ServiceNvM->McalCancel();
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::ReadBlock(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::ReadBlock(
    void
 ){
    lptrConst->ptrinfEcuabMemIf_ServiceNvM->Read();
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::WriteBlock(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::WriteBlock(
    void
 ){
    lptrConst->ptrinfEcuabMemIf_ServiceNvM->Write();
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::RestoreBlockDefaults(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::RestoreBlockDefaults(
    void
 ){
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::EraseNvBlock(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::EraseNvBlock(
    void
 ){
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::McalCancelWriteAll(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::McalCancelWriteAll(
    void
 ){
    lptrConst->ptrinfEcuabMemIf_ServiceNvM->McalCancel();
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::InvalidateNvBlock(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::InvalidateNvBlock(
    void
 ){
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::ReadPRAMBlock(
-   void
-){
-   lptrConst->ptrinfEcuabMemIf_ServiceNvM->Read();
-}
-
-FUNC(void, NVM_CODE) module_ServiceNvM::WritePRAMBlock(
-   void
-){
-   lptrConst->ptrinfEcuabMemIf_ServiceNvM->Write();
-}
-
-FUNC(void, NVM_CODE) module_ServiceNvM::RestorePRAMBlockDefaults(
-   void
-){
-}
-
-FUNC(void, NVM_CODE) module_ServiceNvM::ReadAll(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::ReadPRAMBlock(
    void
 ){
    lptrConst->ptrinfEcuabMemIf_ServiceNvM->Read();
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::WriteAll(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::WritePRAMBlock(
    void
 ){
    lptrConst->ptrinfEcuabMemIf_ServiceNvM->Write();
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::ValidateAll(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::RestorePRAMBlockDefaults(
    void
 ){
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::JobEndNotification(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::ReadAll(
+   void
+){
+   lptrConst->ptrinfEcuabMemIf_ServiceNvM->Read();
+}
+
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::WriteAll(
+   void
+){
+   lptrConst->ptrinfEcuabMemIf_ServiceNvM->Write();
+}
+
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::ValidateAll(
    void
 ){
 }
 
-FUNC(void, NVM_CODE) module_ServiceNvM::JobErrorNotification(
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::JobEndNotification(
+   void
+){
+}
+
+FUNC(void, SERVICENVM_CODE) module_ServiceNvM::JobErrorNotification(
    void
 ){
 }

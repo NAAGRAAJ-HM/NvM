@@ -24,7 +24,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_ServiceNvM:
-      INTERFACES_EXPORTED_NVM
+      INTERFACES_EXMCALPORTED_SERVICENVM
       public abstract_module
    ,  public class_ServiceNvM_Functionality
 {
@@ -38,13 +38,13 @@ class module_ServiceNvM:
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-      FUNC(void, NVM_CODE) InitFunction(
-            CONSTP2CONST(ConstModule_TypeAbstract, NVM_CONST,       NVM_APPL_CONST) lptrConstModule
-         ,  CONSTP2CONST(CfgModule_TypeAbstract,   NVM_CONFIG_DATA, NVM_APPL_CONST) lptrCfgModule
+      FUNC(void, SERVICENVM_CODE) InitFunction(
+            CONSTP2CONST(ConstModule_TypeAbstract, SERVICENVM_CONST,       SERVICENVM_APPL_CONST) lptrConstModule
+         ,  CONSTP2CONST(CfgModule_TypeAbstract,   SERVICENVM_CONFIG_DATA, SERVICENVM_APPL_CONST) lptrCfgModule
       );
-      FUNC(void, NVM_CODE) DeInitFunction (void);
-      FUNC(void, NVM_CODE) MainFunction   (void);
-      NVM_CORE_FUNCTIONALITIES
+      FUNC(void, SERVICENVM_CODE) DeInitFunction (void);
+      FUNC(void, SERVICENVM_CODE) MainFunction   (void);
+      SERVICENVM_CORE_FUNCTIONALITIES
 };
 
 /******************************************************************************/
@@ -58,7 +58,7 @@ class module_ServiceNvM:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-extern VAR(module_ServiceNvM, NVM_VAR) ServiceNvM;
+extern VAR(module_ServiceNvM, SERVICENVM_VAR) ServiceNvM;
 
 /******************************************************************************/
 /* EOF                                                                        */
