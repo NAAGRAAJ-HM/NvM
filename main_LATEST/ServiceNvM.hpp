@@ -24,7 +24,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_ServiceNvM:
-      INTERFACES_EXMCALPORTED_SERVICENVM
+      INTERFACES_EXPORTED_SERVICENVM
       public abstract_module
    ,  public class_ServiceNvM_Functionality
 {
