@@ -11,7 +11,8 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define TABLE_SIZE_SIN_COS (1024u)
+#define TABLE_SIZE_SIN_COS                                               (1024u)
+
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
@@ -23,12 +24,12 @@
 /******************************************************************************/
 /* CONSTS                                                                     */
 /******************************************************************************/
-extern const sint16 Table_Sin[];
-extern const uint16 Table_ArcTan[];
-extern const uint16 Table_Amp[];
-extern const uint16 Table_Sin60[];
-extern const sint16 *pTable_Cos;
-extern const uint16 Table_sqrtmqu[];
+extern const sint16  Table_Sin[];
+extern const uint16  Table_ArcTan[];
+extern const uint16  Table_Amp[];
+extern const uint16  Table_Sin60[];
+extern const sint16* pTable_Cos;
+extern const uint16  Table_sqrtmqu[];
 
 /******************************************************************************/
 /* PARAMS                                                                     */
