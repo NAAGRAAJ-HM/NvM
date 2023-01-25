@@ -1,13 +1,13 @@
 #pragma once
 /******************************************************************************/
-/* File   : ServiceNvM.hpp                                                           */
+/* File   : ServiceNvM.hpp                                                    */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "ConstServiceNvM.hpp"
+#include "infServiceNvM_ServiceNvM_Types.hpp"
 #include "CfgServiceNvM.hpp"
 #include "ServiceNvM_core.hpp"
 #include "infServiceNvM_Exp.hpp"
