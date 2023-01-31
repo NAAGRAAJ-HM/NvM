@@ -13,19 +13,10 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define SERVICENVM_AR_RELEASE_VERSION_MAJOR                                    4
-#define SERVICENVM_AR_RELEASE_VERSION_MINOR                                    3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(SERVICENVM_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
-   #error "Incompatible SERVICENVM_AR_RELEASE_VERSION_MAJOR!"
-#endif
-
-#if(SERVICENVM_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
-   #error "Incompatible SERVICENVM_AR_RELEASE_VERSION_MINOR!"
-#endif
 
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
@@ -34,6 +25,68 @@
 /******************************************************************************/
 /* CONSTS                                                                     */
 /******************************************************************************/
+const NvM_BlocksRom_Type NvM_BlocksRom = {
+   NvM_InitBlocksRom_ApplSwcFoc
+   NvM_InitBlocksRom_ServiceRte
+   NvM_InitBlocksRom_ServiceBswM
+   NvM_InitBlocksRom_ServiceCanNm
+   NvM_InitBlocksRom_ServiceCanSm
+   NvM_InitBlocksRom_ServiceCom
+   NvM_InitBlocksRom_ServiceComM
+   NvM_InitBlocksRom_ServiceCsm
+   NvM_InitBlocksRom_ServiceDcm
+   NvM_InitBlocksRom_ServiceDem
+   NvM_InitBlocksRom_ServiceDet
+   NvM_InitBlocksRom_ServiceDlt
+   NvM_InitBlocksRom_ServiceEcuM
+   NvM_InitBlocksRom_ServiceFiM
+   NvM_InitBlocksRom_ServiceFrNm
+   NvM_InitBlocksRom_ServiceIpduM
+   NvM_InitBlocksRom_ServiceNm
+   NvM_InitBlocksRom_ServiceNvM
+   NvM_InitBlocksRom_ServiceOs
+   NvM_InitBlocksRom_ServicePduR
+   NvM_InitBlocksRom_ServiceSchM
+   NvM_InitBlocksRom_ServiceSecOC
+   NvM_InitBlocksRom_ServiceSokFm
+   NvM_InitBlocksRom_ServiceStartUp
+   NvM_InitBlocksRom_ServiceStbM
+   NvM_InitBlocksRom_ServiceSwcEcuM
+   NvM_InitBlocksRom_ServiceSwcIoHwAb
+   NvM_InitBlocksRom_ServiceSwcOs
+   NvM_InitBlocksRom_ServiceVkms
+   NvM_InitBlocksRom_ServiceWdgM
+   NvM_InitBlocksRom_EcuabCanIf
+   NvM_InitBlocksRom_EcuabCanTp
+   NvM_InitBlocksRom_EcuabCryIf
+   NvM_InitBlocksRom_EcuabEa
+   NvM_InitBlocksRom_EcuabEthIf
+   NvM_InitBlocksRom_EcuabFee
+   NvM_InitBlocksRom_EcuabFrIf
+   NvM_InitBlocksRom_EcuabFrTp
+   NvM_InitBlocksRom_EcuabJ1939Tp
+   NvM_InitBlocksRom_EcuabLinIf
+   NvM_InitBlocksRom_EcuabLinTp
+   NvM_InitBlocksRom_EcuabMemIf
+   NvM_InitBlocksRom_EcuabWdgIf
+   NvM_InitBlocksRom_McalAdc
+   NvM_InitBlocksRom_McalCan
+   NvM_InitBlocksRom_McalCry
+   NvM_InitBlocksRom_McalDio
+   NvM_InitBlocksRom_McalEep
+   NvM_InitBlocksRom_McalEth
+   NvM_InitBlocksRom_McalFls
+   NvM_InitBlocksRom_McalFr
+   NvM_InitBlocksRom_McalGpt
+   NvM_InitBlocksRom_McalIcu
+   NvM_InitBlocksRom_McalLin
+   NvM_InitBlocksRom_McalMcu
+   NvM_InitBlocksRom_McalOcu
+   NvM_InitBlocksRom_McalPort
+   NvM_InitBlocksRom_McalPwm
+   NvM_InitBlocksRom_McalSpi
+   NvM_InitBlocksRom_McalWdg
+};
 
 /******************************************************************************/
 /* PARAMS                                                                     */
@@ -47,12 +100,8 @@ VAR(module_ServiceNvM, SERVICENVM_VAR) ServiceNvM;
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-#include <cstring>
-#include "Const.hpp"
-#include "Cfg.hpp"
-
 FUNC(void, SERVICENVM_CODE) module_ServiceNvM::InitFunction(
-      CONSTP2CONST(ConstModule_TypeAbstract, SERVICENVM_CONST,       SERVICENVM_APPL_CONST) lptrConstModule
+      CONSTP2CONST(ConstModule_TypeAbstract, SERVICENVM_CONST,       SERVICENVM_APPL_CONST) lptrNvMBlocksRomModule
    ,  CONSTP2CONST(CfgModule_TypeAbstract,   SERVICENVM_CONFIG_DATA, SERVICENVM_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == ServiceNvM_InitCheck)
@@ -62,10 +111,10 @@ FUNC(void, SERVICENVM_CODE) module_ServiceNvM::InitFunction(
    ){
 #endif
       if(
-            (NULL_PTR != lptrConstModule)
+            (NULL_PTR != lptrNvMBlocksRomModule)
          && (NULL_PTR != lptrCfgModule)
       ){
-         lptrConst = (const ConstServiceNvM_Type*)lptrConstModule;
+         lptrNvMBlocksRom = lptrNvMBlocksRomModule;
          lptrCfg   = lptrCfgModule;
       }
       else{
@@ -890,19 +939,19 @@ FUNC(void, SERVICENVM_CODE) module_ServiceNvM::SetBlockLockStatus(
 FUNC(void, SERVICENVM_CODE) module_ServiceNvM::McalCancelJobs(
    void
 ){
-   lptrConst->ptrinfEcuabMemIf_ServiceNvM->McalCancel();
+   ((NvM_BlocksRom_ServiceNvM_Type*)lptrNvMBlocksRom)->ptrinfEcuabMemIf_ServiceNvM->McalCancel(); // TBD: OOPS concepts
 }
 
 FUNC(void, SERVICENVM_CODE) module_ServiceNvM::ReadBlock(
    void
 ){
-   lptrConst->ptrinfEcuabMemIf_ServiceNvM->Read();
+   ((NvM_BlocksRom_ServiceNvM_Type*)lptrNvMBlocksRom)->ptrinfEcuabMemIf_ServiceNvM->Read();
 }
 
 FUNC(void, SERVICENVM_CODE) module_ServiceNvM::WriteBlock(
    void
 ){
-   lptrConst->ptrinfEcuabMemIf_ServiceNvM->Write();
+   ((NvM_BlocksRom_ServiceNvM_Type*)lptrNvMBlocksRom)->ptrinfEcuabMemIf_ServiceNvM->Write();
 }
 
 FUNC(void, SERVICENVM_CODE) module_ServiceNvM::RestoreBlockDefaults(
@@ -918,7 +967,7 @@ FUNC(void, SERVICENVM_CODE) module_ServiceNvM::EraseNvBlock(
 FUNC(void, SERVICENVM_CODE) module_ServiceNvM::McalCancelWriteAll(
    void
 ){
-   lptrConst->ptrinfEcuabMemIf_ServiceNvM->McalCancel();
+   ((NvM_BlocksRom_ServiceNvM_Type*)lptrNvMBlocksRom)->ptrinfEcuabMemIf_ServiceNvM->McalCancel();
 }
 
 FUNC(void, SERVICENVM_CODE) module_ServiceNvM::InvalidateNvBlock(
@@ -929,13 +978,13 @@ FUNC(void, SERVICENVM_CODE) module_ServiceNvM::InvalidateNvBlock(
 FUNC(void, SERVICENVM_CODE) module_ServiceNvM::ReadPRAMBlock(
    void
 ){
-   lptrConst->ptrinfEcuabMemIf_ServiceNvM->Read();
+   ((NvM_BlocksRom_ServiceNvM_Type*)lptrNvMBlocksRom)->ptrinfEcuabMemIf_ServiceNvM->Read();
 }
 
 FUNC(void, SERVICENVM_CODE) module_ServiceNvM::WritePRAMBlock(
    void
 ){
-   lptrConst->ptrinfEcuabMemIf_ServiceNvM->Write();
+   ((NvM_BlocksRom_ServiceNvM_Type*)lptrNvMBlocksRom)->ptrinfEcuabMemIf_ServiceNvM->Write();
 }
 
 FUNC(void, SERVICENVM_CODE) module_ServiceNvM::RestorePRAMBlockDefaults(
@@ -946,13 +995,13 @@ FUNC(void, SERVICENVM_CODE) module_ServiceNvM::RestorePRAMBlockDefaults(
 FUNC(void, SERVICENVM_CODE) module_ServiceNvM::ReadAll(
    void
 ){
-   lptrConst->ptrinfEcuabMemIf_ServiceNvM->Read();
+   ((NvM_BlocksRom_ServiceNvM_Type*)lptrNvMBlocksRom)->ptrinfEcuabMemIf_ServiceNvM->Read();
 }
 
 FUNC(void, SERVICENVM_CODE) module_ServiceNvM::WriteAll(
    void
 ){
-   lptrConst->ptrinfEcuabMemIf_ServiceNvM->Write();
+   ((NvM_BlocksRom_ServiceNvM_Type*)lptrNvMBlocksRom)->ptrinfEcuabMemIf_ServiceNvM->Write();
 }
 
 FUNC(void, SERVICENVM_CODE) module_ServiceNvM::ValidateAll(
