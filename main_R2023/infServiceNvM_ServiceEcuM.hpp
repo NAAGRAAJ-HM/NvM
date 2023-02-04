@@ -71,6 +71,69 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class NvM_BlocksNv_Type{
+   public:
+      NvM_BlocksNv_ApplSwcFoc_Type        NvM_BlocksNv_ApplSwcFoc;
+      NvM_BlocksNv_ProjectARA_Type        NvM_BlocksNv_ProjectARA;
+      NvM_BlocksNv_ServiceBswM_Type       NvM_BlocksNv_ServiceBswM;
+      NvM_BlocksNv_ServiceCanNm_Type      NvM_BlocksNv_ServiceCanNm;
+      NvM_BlocksNv_ServiceCanSm_Type      NvM_BlocksNv_ServiceCanSm;
+      NvM_BlocksNv_ServiceCom_Type        NvM_BlocksNv_ServiceCom;
+      NvM_BlocksNv_ServiceComM_Type       NvM_BlocksNv_ServiceComM;
+      NvM_BlocksNv_ServiceCsm_Type        NvM_BlocksNv_ServiceCsm;
+      NvM_BlocksNv_ServiceDcm_Type        NvM_BlocksNv_ServiceDcm;
+      NvM_BlocksNv_ServiceDem_Type        NvM_BlocksNv_ServiceDem;
+      NvM_BlocksNv_ServiceDet_Type        NvM_BlocksNv_ServiceDet;
+      NvM_BlocksNv_ServiceDlt_Type        NvM_BlocksNv_ServiceDlt;
+      NvM_BlocksNv_ServiceEcuM_Type       NvM_BlocksNv_ServiceEcuM;
+      NvM_BlocksNv_ServiceFiM_Type        NvM_BlocksNv_ServiceFiM;
+      NvM_BlocksNv_ServiceFrNm_Type       NvM_BlocksNv_ServiceFrNm;
+      NvM_BlocksNv_ServiceIpduM_Type      NvM_BlocksNv_ServiceIpduM;
+      NvM_BlocksNv_ServiceNm_Type         NvM_BlocksNv_ServiceNm;
+      NvM_BlocksNv_ServiceNvM_Type        NvM_BlocksNv_ServiceNvM;
+      NvM_BlocksNv_ServiceOs_Type         NvM_BlocksNv_ServiceOs;
+      NvM_BlocksNv_ServicePduR_Type       NvM_BlocksNv_ServicePduR;
+      NvM_BlocksNv_ServiceSchM_Type       NvM_BlocksNv_ServiceSchM;
+      NvM_BlocksNv_ServiceSecOC_Type      NvM_BlocksNv_ServiceSecOC;
+      NvM_BlocksNv_ServiceSokFm_Type      NvM_BlocksNv_ServiceSokFm;
+      NvM_BlocksNv_ServiceStartUp_Type    NvM_BlocksNv_ServiceStartUp;
+      NvM_BlocksNv_ServiceStbM_Type       NvM_BlocksNv_ServiceStbM;
+      NvM_BlocksNv_ServiceSwcEcuM_Type    NvM_BlocksNv_ServiceSwcEcuM;
+      NvM_BlocksNv_ServiceSwcOs_Type      NvM_BlocksNv_ServiceSwcOs;
+      NvM_BlocksNv_ServiceVkms_Type       NvM_BlocksNv_ServiceVkms;
+      NvM_BlocksNv_ServiceWdgM_Type       NvM_BlocksNv_ServiceWdgM;
+      NvM_BlocksNv_EcuabCanIf_Type        NvM_BlocksNv_EcuabCanIf;
+      NvM_BlocksNv_EcuabCanTp_Type        NvM_BlocksNv_EcuabCanTp;
+      NvM_BlocksNv_EcuabCryIf_Type        NvM_BlocksNv_EcuabCryIf;
+      NvM_BlocksNv_EcuabEa_Type           NvM_BlocksNv_EcuabEa;
+      NvM_BlocksNv_EcuabEthIf_Type        NvM_BlocksNv_EcuabEthIf;
+      NvM_BlocksNv_EcuabFee_Type          NvM_BlocksNv_EcuabFee;
+      NvM_BlocksNv_EcuabFrIf_Type         NvM_BlocksNv_EcuabFrIf;
+      NvM_BlocksNv_EcuabFrTp_Type         NvM_BlocksNv_EcuabFrTp;
+      NvM_BlocksNv_EcuabJ1939Tp_Type      NvM_BlocksNv_EcuabJ1939Tp;
+      NvM_BlocksNv_EcuabLinIf_Type        NvM_BlocksNv_EcuabLinIf;
+      NvM_BlocksNv_EcuabLinTp_Type        NvM_BlocksNv_EcuabLinTp;
+      NvM_BlocksNv_EcuabMemIf_Type        NvM_BlocksNv_EcuabMemIf;
+      NvM_BlocksNv_EcuabWdgIf_Type        NvM_BlocksNv_EcuabWdgIf;
+      NvM_BlocksNv_McalAdc_Type           NvM_BlocksNv_McalAdc;
+      NvM_BlocksNv_McalCan_Type           NvM_BlocksNv_McalCan;
+      NvM_BlocksNv_McalCry_Type           NvM_BlocksNv_McalCry;
+      NvM_BlocksNv_McalDio_Type           NvM_BlocksNv_McalDio;
+      NvM_BlocksNv_McalEep_Type           NvM_BlocksNv_McalEep;
+      NvM_BlocksNv_McalEth_Type           NvM_BlocksNv_McalEth;
+      NvM_BlocksNv_McalFls_Type           NvM_BlocksNv_McalFls;
+      NvM_BlocksNv_McalFr_Type            NvM_BlocksNv_McalFr;
+      NvM_BlocksNv_McalGpt_Type           NvM_BlocksNv_McalGpt;
+      NvM_BlocksNv_McalIcu_Type           NvM_BlocksNv_McalIcu;
+      NvM_BlocksNv_McalLin_Type           NvM_BlocksNv_McalLin;
+      NvM_BlocksNv_McalMcu_Type           NvM_BlocksNv_McalMcu;
+      NvM_BlocksNv_McalOcu_Type           NvM_BlocksNv_McalOcu;
+      NvM_BlocksNv_McalPort_Type          NvM_BlocksNv_McalPort;
+      NvM_BlocksNv_McalPwm_Type           NvM_BlocksNv_McalPwm;
+      NvM_BlocksNv_McalSpi_Type           NvM_BlocksNv_McalSpi;
+      NvM_BlocksNv_McalWdg_Type           NvM_BlocksNv_McalWdg;
+};
+
 class NvM_BlocksRom_Type{
    public:
       NvM_BlocksRom_ApplSwcFoc_Type       NvM_BlocksRom_ApplSwcFoc;

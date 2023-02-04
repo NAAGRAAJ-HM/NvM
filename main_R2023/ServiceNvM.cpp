@@ -13,6 +13,87 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
+#define PBcfgGen_DefaultInit                                                   \
+      {ApplSwcFoc_DevErrorDetect,     {APPLSWCFOC_AR_RELEASE_VERSION_MAJOR,     APPLSWCFOC_AR_RELEASE_VERSION_MINOR,     0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ProjectARA_DevErrorDetect,     {RTE_AR_RELEASE_VERSION_MAJOR,            RTE_AR_RELEASE_VERSION_MINOR,            0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceBswM_DevErrorDetect,    {SERVICEBSWM_AR_RELEASE_VERSION_MAJOR,    SERVICEBSWM_AR_RELEASE_VERSION_MINOR,    0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceCanNm_DevErrorDetect,   {SERVICECANNM_AR_RELEASE_VERSION_MAJOR,   SERVICECANNM_AR_RELEASE_VERSION_MINOR,   0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceCanSm_DevErrorDetect,   {SERVICECANSM_AR_RELEASE_VERSION_MAJOR,   SERVICECANSM_AR_RELEASE_VERSION_MINOR,   0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceCom_DevErrorDetect,     {SERVICECOM_AR_RELEASE_VERSION_MAJOR,     SERVICECOM_AR_RELEASE_VERSION_MINOR,     0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceComM_DevErrorDetect,    {SERVICECOMM_AR_RELEASE_VERSION_MAJOR,    SERVICECOMM_AR_RELEASE_VERSION_MINOR,    0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceCsm_DevErrorDetect,     {SERVICECSM_AR_RELEASE_VERSION_MAJOR,     SERVICECSM_AR_RELEASE_VERSION_MINOR,     0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceDcm_DevErrorDetect,     {SERVICEDCM_AR_RELEASE_VERSION_MAJOR,     SERVICEDCM_AR_RELEASE_VERSION_MINOR,     0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceDem_DevErrorDetect,     {SERVICEDEM_AR_RELEASE_VERSION_MAJOR,     SERVICEDEM_AR_RELEASE_VERSION_MINOR,     0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceDet_DevErrorDetect,     {SERVICEDET_AR_RELEASE_VERSION_MAJOR,     SERVICEDET_AR_RELEASE_VERSION_MINOR,     0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceDlt_DevErrorDetect,     {SERVICEDLT_AR_RELEASE_VERSION_MAJOR,     SERVICEDLT_AR_RELEASE_VERSION_MINOR,     0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceEcuM_DevErrorDetect,    {SERVICEECUM_AR_RELEASE_VERSION_MAJOR,    SERVICEECUM_AR_RELEASE_VERSION_MINOR,    0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceFiM_DevErrorDetect,     {SERVICEFIM_AR_RELEASE_VERSION_MAJOR,     SERVICEFIM_AR_RELEASE_VERSION_MINOR,     0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceFrNm_DevErrorDetect,    {SERVICEFRNM_AR_RELEASE_VERSION_MAJOR,    SERVICEFRNM_AR_RELEASE_VERSION_MINOR,    0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceIpduM_DevErrorDetect,   {SERVICEIPDUM_AR_RELEASE_VERSION_MAJOR,   SERVICEIPDUM_AR_RELEASE_VERSION_MINOR,   0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceNm_DevErrorDetect,      {SERVICENM_AR_RELEASE_VERSION_MAJOR,      SERVICENM_AR_RELEASE_VERSION_MINOR,      0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceNvM_DevErrorDetect,     {SERVICENVM_AR_RELEASE_VERSION_MAJOR,     SERVICENVM_AR_RELEASE_VERSION_MINOR,     0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceOs_DevErrorDetect,      {SERVICEOS_AR_RELEASE_VERSION_MAJOR,      SERVICEOS_AR_RELEASE_VERSION_MINOR,      0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {                                                                        \
+            ServicePduR_DevErrorDetect                                         \
+         ,  {                                                                  \
+                  SERVICEPDUR_AR_RELEASE_VERSION_MAJOR                      \
+               ,  SERVICEPDUR_AR_RELEASE_VERSION_MINOR                      \
+               ,  0x00                                                         \
+               ,  0xFF                                                         \
+               ,  0x01                                                         \
+               ,  '0'                                                          \
+               ,  '1'                                                          \
+               ,  '0'                                                          \
+            }                                                                  \
+         ,  {                                                                  \
+                  1                                                            \
+               ,  {                                                            \
+                        &ServicePduRClient_ServiceDcm                          \
+/*                   ,  &ServicePduRClient_ServiceCom */                       \
+                  }                                                            \
+               ,  0                                                            \
+               ,  0                                                            \
+            }                                                                  \
+      }                                                                        \
+   ,  {ServiceSchM_DevErrorDetect,    {SERVICESCHM_AR_RELEASE_VERSION_MAJOR,    SERVICESCHM_AR_RELEASE_VERSION_MINOR,    0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceSecOC_DevErrorDetect,   {SERVICESECOC_AR_RELEASE_VERSION_MAJOR,   SERVICESECOC_AR_RELEASE_VERSION_MINOR,   0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceSokFm_DevErrorDetect,   {SERVICESOKFM_AR_RELEASE_VERSION_MAJOR,   SERVICESOKFM_AR_RELEASE_VERSION_MINOR,   0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceStartUp_DevErrorDetect, {SERVICESTARTUP_AR_RELEASE_VERSION_MAJOR, SERVICESTARTUP_AR_RELEASE_VERSION_MINOR, 0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceStbM_DevErrorDetect,    {SERVICESTBM_AR_RELEASE_VERSION_MAJOR,    SERVICESTBM_AR_RELEASE_VERSION_MINOR,    0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceSwcEcuM_DevErrorDetect, {SERVICESWCECUM_AR_RELEASE_VERSION_MAJOR, SERVICESWCECUM_AR_RELEASE_VERSION_MINOR, 0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceSwcOs_DevErrorDetect,   {SERVICESWCOS_AR_RELEASE_VERSION_MAJOR,   SERVICESWCOS_AR_RELEASE_VERSION_MINOR,   0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceVkms_DevErrorDetect,    {SERVICEVKMS_AR_RELEASE_VERSION_MAJOR,    SERVICEVKMS_AR_RELEASE_VERSION_MINOR,    0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {ServiceWdgM_DevErrorDetect,    {SERVICEWDGM_AR_RELEASE_VERSION_MAJOR,    SERVICEWDGM_AR_RELEASE_VERSION_MINOR,    0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {EcuabCanIf_DevErrorDetect,     {ECUABCANIF_AR_RELEASE_VERSION_MAJOR,     ECUABCANIF_AR_RELEASE_VERSION_MINOR,     0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {EcuabCanTp_DevErrorDetect,     {ECUABCANTP_AR_RELEASE_VERSION_MAJOR,     ECUABCANTP_AR_RELEASE_VERSION_MINOR,     0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {EcuabCryIf_DevErrorDetect,     {ECUABCRYIF_AR_RELEASE_VERSION_MAJOR,     ECUABCRYIF_AR_RELEASE_VERSION_MINOR,     0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {EcuabEa_DevErrorDetect,        {ECUABEA_AR_RELEASE_VERSION_MAJOR,        ECUABEA_AR_RELEASE_VERSION_MINOR,        0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {EcuabEthIf_DevErrorDetect,     {ECUABETHIF_AR_RELEASE_VERSION_MAJOR,     ECUABETHIF_AR_RELEASE_VERSION_MINOR,     0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {EcuabFee_DevErrorDetect,       {ECUABFEE_AR_RELEASE_VERSION_MAJOR,       ECUABFEE_AR_RELEASE_VERSION_MINOR,       0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {EcuabFrIf_DevErrorDetect,      {ECUABFRIF_AR_RELEASE_VERSION_MAJOR,      ECUABFRIF_AR_RELEASE_VERSION_MINOR,      0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {EcuabFrTp_DevErrorDetect,      {ECUABFRTP_AR_RELEASE_VERSION_MAJOR,      ECUABFRTP_AR_RELEASE_VERSION_MINOR,      0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {EcuabJ1939Tp_DevErrorDetect,   {ECUABJ1939TP_AR_RELEASE_VERSION_MAJOR,   ECUABJ1939TP_AR_RELEASE_VERSION_MINOR,   0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {EcuabLinIf_DevErrorDetect,     {ECUABLINIF_AR_RELEASE_VERSION_MAJOR,     ECUABLINIF_AR_RELEASE_VERSION_MINOR,     0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {EcuabLinTp_DevErrorDetect,     {ECUABLINTP_AR_RELEASE_VERSION_MAJOR,     ECUABLINTP_AR_RELEASE_VERSION_MINOR,     0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {EcuabMemIf_DevErrorDetect,     {ECUABMEMIF_AR_RELEASE_VERSION_MAJOR,     ECUABMEMIF_AR_RELEASE_VERSION_MINOR,     0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {EcuabWdgIf_DevErrorDetect,     {ECUABWDGIF_AR_RELEASE_VERSION_MAJOR,     ECUABWDGIF_AR_RELEASE_VERSION_MINOR,     0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {McalAdc_DevErrorDetect,        {MCALADC_AR_RELEASE_VERSION_MAJOR,        MCALADC_AR_RELEASE_VERSION_MINOR,        0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {McalCan_DevErrorDetect,        {MCALCAN_AR_RELEASE_VERSION_MAJOR,        MCALCAN_AR_RELEASE_VERSION_MINOR,        0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {McalCry_DevErrorDetect,        {MCALCRY_AR_RELEASE_VERSION_MAJOR,        MCALCRY_AR_RELEASE_VERSION_MINOR,        0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {McalDio_DevErrorDetect,        {MCALDIO_AR_RELEASE_VERSION_MAJOR,        MCALDIO_AR_RELEASE_VERSION_MINOR,        0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {McalEep_DevErrorDetect,        {MCALEEP_AR_RELEASE_VERSION_MAJOR,        MCALEEP_AR_RELEASE_VERSION_MINOR,        0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {McalEth_DevErrorDetect,        {MCALETH_AR_RELEASE_VERSION_MAJOR,        MCALETH_AR_RELEASE_VERSION_MINOR,        0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {McalFls_DevErrorDetect,        {MCALFLS_AR_RELEASE_VERSION_MAJOR,        MCALFLS_AR_RELEASE_VERSION_MINOR,        0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {McalFr_DevErrorDetect,         {MCALFR_AR_RELEASE_VERSION_MAJOR,         MCALFR_AR_RELEASE_VERSION_MINOR,         0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {McalGpt_DevErrorDetect,        {MCALGPT_AR_RELEASE_VERSION_MAJOR,        MCALGPT_AR_RELEASE_VERSION_MINOR,        0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {McalIcu_DevErrorDetect,        {MCALICU_AR_RELEASE_VERSION_MAJOR,        MCALICU_AR_RELEASE_VERSION_MINOR,        0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {McalLin_DevErrorDetect,        {MCALLIN_AR_RELEASE_VERSION_MAJOR,        MCALLIN_AR_RELEASE_VERSION_MINOR,        0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {McalMcu_DevErrorDetect,        {MCALMCU_AR_RELEASE_VERSION_MAJOR,        MCALMCU_AR_RELEASE_VERSION_MINOR,        0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {McalOcu_DevErrorDetect,        {MCALOCU_AR_RELEASE_VERSION_MAJOR,        MCALOCU_AR_RELEASE_VERSION_MINOR,        0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {McalPort_DevErrorDetect,       {MCALPORT_AR_RELEASE_VERSION_MAJOR,       MCALPORT_AR_RELEASE_VERSION_MINOR,       0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {McalPwm_DevErrorDetect,        {MCALPWM_AR_RELEASE_VERSION_MAJOR,        MCALPWM_AR_RELEASE_VERSION_MINOR,        0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {McalSpi_DevErrorDetect,        {MCALSPI_AR_RELEASE_VERSION_MAJOR,        MCALSPI_AR_RELEASE_VERSION_MINOR,        0x00,0xFF,0x01,'0','1','0'}} \
+   ,  {McalWdg_DevErrorDetect,        {MCALWDG_AR_RELEASE_VERSION_MAJOR,        MCALWDG_AR_RELEASE_VERSION_MINOR,        0x00,0xFF,0x01,'0','1','0'}} \
 
 /******************************************************************************/
 /* MACROS                                                                     */
@@ -25,6 +106,16 @@
 /******************************************************************************/
 /* CONSTS                                                                     */
 /******************************************************************************/
+TypeClient ServicePduRClient_ServiceDcm; //TBD:  = {0}; actual realization
+
+const NvM_BlocksNv_Type NvM_BlocksNvRom = {
+   PBcfgGen_DefaultInit
+};
+
+const NvM_BlocksNv_Type Fls_Blocks = { //TBD: move to Fls
+   PBcfgGen_DefaultInit
+};
+
 const NvM_BlocksRom_Type NvM_BlocksRom = {
    NvM_InitBlocksRom_ApplSwcFoc
    NvM_InitBlocksRom_ServiceRte
@@ -96,6 +187,8 @@ const NvM_BlocksRom_Type NvM_BlocksRom = {
 /* OBJECTS                                                                    */
 /******************************************************************************/
 VAR(module_ServiceNvM, SERVICENVM_VAR) ServiceNvM;
+NvM_BlocksNv_Type NvM_BlocksNvRam; //TBD: move as private data
+
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
@@ -130,708 +223,708 @@ FUNC(void, SERVICENVM_CODE) module_ServiceNvM::InitFunction(
 
       if(FALSE){
          memcpy(
-               (      void*)&CfgGen_ServiceNvM
-            ,  (const void*)&CfgGen_McalFls
-            ,  sizeof(CfgGen_Type)
+               (      void*)&NvM_BlocksNvRam
+            ,  (const void*)&Fls_Blocks
+            ,  sizeof(NvM_BlocksNv_Type)
          );
       }
       else{
          memcpy(
-               (      void*)&CfgGen_ServiceNvM
-            ,  (const void*)&PBcfgGen_ROM
-            ,  sizeof(CfgGen_Type)
+               (      void*)&NvM_BlocksNvRam
+            ,  (const void*)&NvM_BlocksNvRom
+            ,  sizeof(NvM_BlocksNv_Type)
          );
       }
 
 #if(STD_ON == _ReSIM)
 /*
-      cout<<endl<<endl<<"CfgMcalAdc";
-      printf("\nCfgGen_ServiceNvM.CfgMcalAdc.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgMcalAdc.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgMcalAdc.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalAdc.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalAdc.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalAdc.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalAdc.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalAdc.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalAdc.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalAdc.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgMcalAdc.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalAdc.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgMcalAdc.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalAdc.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalAdc.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalAdc.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalAdc.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalAdc.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_McalAdc";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalAdc.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_McalAdc.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalAdc.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalAdc.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalAdc.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalAdc.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalAdc.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalAdc.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalAdc.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalAdc.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalAdc.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalAdc.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalAdc.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalAdc.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalAdc.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalAdc.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalAdc.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalAdc.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceBswM";
-      printf("\nCfgGen_ServiceNvM.CfgServiceBswM.bDevErrorDetect                        = %d", CfgGen_ServiceNvM.CfgServiceBswM.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceBswM.VersionInfo.u8ArVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceBswM.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceBswM.VersionInfo.u8ArVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceBswM.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceBswM.VersionInfo.u8IDVendor                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceBswM.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceBswM.VersionInfo.u8IDModule                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceBswM.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceBswM.VersionInfo.u8IDInstance               = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceBswM.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceBswM.VersionInfo.u8SwVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceBswM.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceBswM.VersionInfo.u8SwVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceBswM.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceBswM.VersionInfo.u8SwVersionPatch           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceBswM.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceBswM";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceBswM.bDevErrorDetect                        = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceBswM.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceBswM.VersionInfo.u8ArVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceBswM.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceBswM.VersionInfo.u8ArVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceBswM.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceBswM.VersionInfo.u8IDVendor                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceBswM.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceBswM.VersionInfo.u8IDModule                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceBswM.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceBswM.VersionInfo.u8IDInstance               = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceBswM.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceBswM.VersionInfo.u8SwVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceBswM.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceBswM.VersionInfo.u8SwVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceBswM.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceBswM.VersionInfo.u8SwVersionPatch           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceBswM.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgMcalCan";
-      printf("\nCfgGen_ServiceNvM.CfgMcalCan.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgMcalCan.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgMcalCan.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalCan.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalCan.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalCan.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalCan.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalCan.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalCan.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalCan.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgMcalCan.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalCan.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgMcalCan.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalCan.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalCan.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalCan.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalCan.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalCan.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_McalCan";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalCan.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_McalCan.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalCan.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalCan.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalCan.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalCan.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalCan.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalCan.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalCan.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalCan.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalCan.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalCan.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalCan.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalCan.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalCan.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalCan.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalCan.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalCan.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgEcuabCanIf";
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCanIf.bDevErrorDetect                       = %d", CfgGen_ServiceNvM.CfgEcuabCanIf.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCanIf.VersionInfo.u8ArVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCanIf.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCanIf.VersionInfo.u8ArVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCanIf.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCanIf.VersionInfo.u8IDVendor                = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCanIf.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCanIf.VersionInfo.u8IDModule                = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCanIf.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCanIf.VersionInfo.u8IDInstance              = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCanIf.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCanIf.VersionInfo.u8SwVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCanIf.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCanIf.VersionInfo.u8SwVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCanIf.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCanIf.VersionInfo.u8SwVersionPatch          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCanIf.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_EcuabCanIf";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCanIf.bDevErrorDetect                       = %d", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCanIf.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCanIf.VersionInfo.u8ArVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCanIf.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCanIf.VersionInfo.u8ArVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCanIf.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCanIf.VersionInfo.u8IDVendor                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCanIf.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCanIf.VersionInfo.u8IDModule                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCanIf.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCanIf.VersionInfo.u8IDInstance              = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCanIf.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCanIf.VersionInfo.u8SwVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCanIf.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCanIf.VersionInfo.u8SwVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCanIf.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCanIf.VersionInfo.u8SwVersionPatch          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCanIf.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceCanNm";
-      printf("\nCfgGen_ServiceNvM.CfgServiceCanNm.bDevErrorDetect                       = %d", CfgGen_ServiceNvM.CfgServiceCanNm.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCanNm.VersionInfo.u8ArVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCanNm.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCanNm.VersionInfo.u8ArVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCanNm.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCanNm.VersionInfo.u8IDVendor                = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCanNm.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCanNm.VersionInfo.u8IDModule                = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCanNm.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCanNm.VersionInfo.u8IDInstance              = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCanNm.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCanNm.VersionInfo.u8SwVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCanNm.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCanNm.VersionInfo.u8SwVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCanNm.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCanNm.VersionInfo.u8SwVersionPatch          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCanNm.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceCanNm";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCanNm.bDevErrorDetect                       = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCanNm.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCanNm.VersionInfo.u8ArVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCanNm.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCanNm.VersionInfo.u8ArVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCanNm.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCanNm.VersionInfo.u8IDVendor                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCanNm.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCanNm.VersionInfo.u8IDModule                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCanNm.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCanNm.VersionInfo.u8IDInstance              = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCanNm.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCanNm.VersionInfo.u8SwVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCanNm.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCanNm.VersionInfo.u8SwVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCanNm.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCanNm.VersionInfo.u8SwVersionPatch          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCanNm.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceCanSm";
-      printf("\nCfgGen_ServiceNvM.CfgServiceCanSm.bDevErrorDetect                       = %d", CfgGen_ServiceNvM.CfgServiceCanSm.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCanSm.VersionInfo.u8ArVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCanSm.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCanSm.VersionInfo.u8ArVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCanSm.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCanSm.VersionInfo.u8IDVendor                = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCanSm.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCanSm.VersionInfo.u8IDModule                = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCanSm.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCanSm.VersionInfo.u8IDInstance              = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCanSm.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCanSm.VersionInfo.u8SwVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCanSm.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCanSm.VersionInfo.u8SwVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCanSm.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCanSm.VersionInfo.u8SwVersionPatch          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCanSm.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceCanSm";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCanSm.bDevErrorDetect                       = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCanSm.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCanSm.VersionInfo.u8ArVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCanSm.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCanSm.VersionInfo.u8ArVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCanSm.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCanSm.VersionInfo.u8IDVendor                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCanSm.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCanSm.VersionInfo.u8IDModule                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCanSm.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCanSm.VersionInfo.u8IDInstance              = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCanSm.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCanSm.VersionInfo.u8SwVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCanSm.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCanSm.VersionInfo.u8SwVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCanSm.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCanSm.VersionInfo.u8SwVersionPatch          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCanSm.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgEcuabCanTp";
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCanTp.bDevErrorDetect                       = %d", CfgGen_ServiceNvM.CfgEcuabCanTp.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCanTp.VersionInfo.u8ArVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCanTp.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCanTp.VersionInfo.u8ArVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCanTp.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCanTp.VersionInfo.u8IDVendor                = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCanTp.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCanTp.VersionInfo.u8IDModule                = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCanTp.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCanTp.VersionInfo.u8IDInstance              = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCanTp.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCanTp.VersionInfo.u8SwVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCanTp.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCanTp.VersionInfo.u8SwVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCanTp.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCanTp.VersionInfo.u8SwVersionPatch          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCanTp.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_EcuabCanTp";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCanTp.bDevErrorDetect                       = %d", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCanTp.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCanTp.VersionInfo.u8ArVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCanTp.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCanTp.VersionInfo.u8ArVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCanTp.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCanTp.VersionInfo.u8IDVendor                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCanTp.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCanTp.VersionInfo.u8IDModule                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCanTp.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCanTp.VersionInfo.u8IDInstance              = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCanTp.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCanTp.VersionInfo.u8SwVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCanTp.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCanTp.VersionInfo.u8SwVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCanTp.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCanTp.VersionInfo.u8SwVersionPatch          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCanTp.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceCom";
-      printf("\nCfgGen_ServiceNvM.CfgServiceCom.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgServiceCom.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCom.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCom.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCom.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCom.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCom.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCom.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCom.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCom.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCom.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCom.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCom.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCom.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCom.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCom.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCom.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCom.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceCom";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCom.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCom.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCom.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCom.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCom.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCom.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCom.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCom.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCom.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCom.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCom.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCom.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCom.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCom.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCom.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCom.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCom.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCom.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceComM";
-      printf("\nCfgGen_ServiceNvM.CfgServiceComM.bDevErrorDetect                        = %d", CfgGen_ServiceNvM.CfgServiceComM.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceComM.VersionInfo.u8ArVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceComM.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceComM.VersionInfo.u8ArVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceComM.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceComM.VersionInfo.u8IDVendor                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceComM.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceComM.VersionInfo.u8IDModule                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceComM.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceComM.VersionInfo.u8IDInstance               = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceComM.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceComM.VersionInfo.u8SwVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceComM.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceComM.VersionInfo.u8SwVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceComM.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceComM.VersionInfo.u8SwVersionPatch           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceComM.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceComM";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceComM.bDevErrorDetect                        = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceComM.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceComM.VersionInfo.u8ArVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceComM.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceComM.VersionInfo.u8ArVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceComM.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceComM.VersionInfo.u8IDVendor                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceComM.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceComM.VersionInfo.u8IDModule                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceComM.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceComM.VersionInfo.u8IDInstance               = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceComM.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceComM.VersionInfo.u8SwVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceComM.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceComM.VersionInfo.u8SwVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceComM.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceComM.VersionInfo.u8SwVersionPatch           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceComM.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgMcalCry";
-      printf("\nCfgGen_ServiceNvM.CfgMcalCry.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgMcalCry.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgMcalCry.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalCry.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalCry.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalCry.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalCry.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalCry.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalCry.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalCry.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgMcalCry.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalCry.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgMcalCry.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalCry.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalCry.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalCry.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalCry.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalCry.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_McalCry";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalCry.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_McalCry.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalCry.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalCry.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalCry.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalCry.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalCry.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalCry.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalCry.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalCry.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalCry.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalCry.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalCry.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalCry.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalCry.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalCry.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalCry.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalCry.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgEcuabCryIf";
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCryIf.bDevErrorDetect                       = %d", CfgGen_ServiceNvM.CfgEcuabCryIf.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCryIf.VersionInfo.u8ArVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCryIf.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCryIf.VersionInfo.u8ArVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCryIf.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCryIf.VersionInfo.u8IDVendor                = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCryIf.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCryIf.VersionInfo.u8IDModule                = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCryIf.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCryIf.VersionInfo.u8IDInstance              = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCryIf.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCryIf.VersionInfo.u8SwVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCryIf.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCryIf.VersionInfo.u8SwVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCryIf.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabCryIf.VersionInfo.u8SwVersionPatch          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabCryIf.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_EcuabCryIf";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCryIf.bDevErrorDetect                       = %d", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCryIf.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCryIf.VersionInfo.u8ArVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCryIf.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCryIf.VersionInfo.u8ArVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCryIf.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCryIf.VersionInfo.u8IDVendor                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCryIf.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCryIf.VersionInfo.u8IDModule                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCryIf.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCryIf.VersionInfo.u8IDInstance              = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCryIf.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCryIf.VersionInfo.u8SwVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCryIf.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCryIf.VersionInfo.u8SwVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCryIf.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabCryIf.VersionInfo.u8SwVersionPatch          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabCryIf.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceCsm";
-      printf("\nCfgGen_ServiceNvM.CfgServiceCsm.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgServiceCsm.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCsm.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCsm.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCsm.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCsm.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCsm.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCsm.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCsm.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCsm.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCsm.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCsm.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCsm.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCsm.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCsm.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCsm.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceCsm.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceCsm.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceCsm";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCsm.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCsm.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCsm.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCsm.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCsm.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCsm.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCsm.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCsm.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCsm.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCsm.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCsm.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCsm.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCsm.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCsm.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCsm.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCsm.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceCsm.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceCsm.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceDcm";
-      printf("\nCfgGen_ServiceNvM.CfgServiceDcm.bDevErrorDetect                        = %d", CfgGen_ServiceNvM.CfgServiceDcm.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDcm.VersionInfo.u8ArVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDcm.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDcm.VersionInfo.u8ArVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDcm.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDcm.VersionInfo.u8IDVendor                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDcm.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDcm.VersionInfo.u8IDModule                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDcm.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDcm.VersionInfo.u8IDInstance               = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDcm.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDcm.VersionInfo.u8SwVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDcm.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDcm.VersionInfo.u8SwVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDcm.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDcm.VersionInfo.u8SwVersionPatch           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDcm.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceDcm";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDcm.bDevErrorDetect                        = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDcm.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDcm.VersionInfo.u8ArVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDcm.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDcm.VersionInfo.u8ArVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDcm.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDcm.VersionInfo.u8IDVendor                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDcm.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDcm.VersionInfo.u8IDModule                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDcm.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDcm.VersionInfo.u8IDInstance               = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDcm.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDcm.VersionInfo.u8SwVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDcm.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDcm.VersionInfo.u8SwVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDcm.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDcm.VersionInfo.u8SwVersionPatch           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDcm.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceDem";
-      printf("\nCfgGen_ServiceNvM.CfgServiceDem.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgServiceDem.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDem.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDem.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDem.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDem.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDem.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDem.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDem.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDem.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDem.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDem.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDem.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDem.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDem.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDem.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDem.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDem.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceDem";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDem.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDem.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDem.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDem.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDem.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDem.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDem.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDem.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDem.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDem.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDem.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDem.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDem.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDem.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDem.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDem.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDem.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDem.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceDet";
-      printf("\nCfgGen_ServiceNvM.CfgServiceDet.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgServiceDet.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDet.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDet.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDet.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDet.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDet.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDet.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDet.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDet.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDet.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDet.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDet.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDet.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDet.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDet.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDet.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDet.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceDet";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDet.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDet.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDet.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDet.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDet.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDet.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDet.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDet.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDet.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDet.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDet.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDet.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDet.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDet.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDet.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDet.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDet.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDet.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgMcalDio";
-      printf("\nCfgGen_ServiceNvM.CfgMcalDio.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgMcalDio.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgMcalDio.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalDio.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalDio.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalDio.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalDio.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalDio.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalDio.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalDio.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgMcalDio.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalDio.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgMcalDio.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalDio.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalDio.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalDio.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalDio.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalDio.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_McalDio";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalDio.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_McalDio.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalDio.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalDio.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalDio.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalDio.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalDio.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalDio.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalDio.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalDio.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalDio.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalDio.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalDio.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalDio.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalDio.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalDio.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalDio.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalDio.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceDlt";
-      printf("\nCfgGen_ServiceNvM.CfgServiceDlt.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgServiceDlt.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDlt.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDlt.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDlt.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDlt.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDlt.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDlt.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDlt.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDlt.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDlt.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDlt.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDlt.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDlt.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDlt.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDlt.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceDlt.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceDlt.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceDlt";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDlt.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDlt.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDlt.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDlt.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDlt.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDlt.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDlt.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDlt.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDlt.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDlt.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDlt.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDlt.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDlt.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDlt.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDlt.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDlt.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceDlt.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceDlt.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgEcuabEa";
-      printf("\nCfgGen_ServiceNvM.CfgEcuabEa.bDevErrorDetect                          = %d", CfgGen_ServiceNvM.CfgEcuabEa.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabEa.VersionInfo.u8ArVersionMajor             = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabEa.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabEa.VersionInfo.u8ArVersionMinor             = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabEa.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabEa.VersionInfo.u8IDVendor                   = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabEa.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabEa.VersionInfo.u8IDModule                   = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabEa.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabEa.VersionInfo.u8IDInstance                 = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabEa.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabEa.VersionInfo.u8SwVersionMajor             = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabEa.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabEa.VersionInfo.u8SwVersionMinor             = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabEa.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabEa.VersionInfo.u8SwVersionPatch             = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabEa.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_EcuabEa";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabEa.bDevErrorDetect                          = %d", NvM_BlocksNvRam.NvM_BlocksNv_EcuabEa.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabEa.VersionInfo.u8ArVersionMajor             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabEa.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabEa.VersionInfo.u8ArVersionMinor             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabEa.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabEa.VersionInfo.u8IDVendor                   = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabEa.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabEa.VersionInfo.u8IDModule                   = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabEa.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabEa.VersionInfo.u8IDInstance                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabEa.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabEa.VersionInfo.u8SwVersionMajor             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabEa.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabEa.VersionInfo.u8SwVersionMinor             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabEa.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabEa.VersionInfo.u8SwVersionPatch             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabEa.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceEcuM";
-      printf("\nCfgGen_ServiceNvM.CfgServiceEcuM.bDevErrorDetect                        = %d", CfgGen_ServiceNvM.CfgServiceEcuM.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceEcuM.VersionInfo.u8ArVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceEcuM.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceEcuM.VersionInfo.u8ArVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceEcuM.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceEcuM.VersionInfo.u8IDVendor                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceEcuM.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceEcuM.VersionInfo.u8IDModule                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceEcuM.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceEcuM.VersionInfo.u8IDInstance               = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceEcuM.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceEcuM.VersionInfo.u8SwVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceEcuM.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceEcuM.VersionInfo.u8SwVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceEcuM.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceEcuM.VersionInfo.u8SwVersionPatch           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceEcuM.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceEcuM";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceEcuM.bDevErrorDetect                        = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceEcuM.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceEcuM.VersionInfo.u8ArVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceEcuM.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceEcuM.VersionInfo.u8ArVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceEcuM.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceEcuM.VersionInfo.u8IDVendor                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceEcuM.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceEcuM.VersionInfo.u8IDModule                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceEcuM.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceEcuM.VersionInfo.u8IDInstance               = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceEcuM.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceEcuM.VersionInfo.u8SwVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceEcuM.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceEcuM.VersionInfo.u8SwVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceEcuM.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceEcuM.VersionInfo.u8SwVersionPatch           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceEcuM.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgMcalEep";
-      printf("\nCfgGen_ServiceNvM.CfgMcalEep.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgMcalEep.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgMcalEep.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalEep.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalEep.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalEep.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalEep.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalEep.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalEep.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalEep.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgMcalEep.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalEep.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgMcalEep.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalEep.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalEep.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalEep.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalEep.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalEep.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_McalEep";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalEep.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_McalEep.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalEep.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalEep.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalEep.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalEep.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalEep.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalEep.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalEep.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalEep.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalEep.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalEep.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalEep.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalEep.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalEep.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalEep.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalEep.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalEep.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgMcalEth";
-      printf("\nCfgGen_ServiceNvM.CfgMcalEth.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgMcalEth.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgMcalEth.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalEth.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalEth.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalEth.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalEth.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalEth.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalEth.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalEth.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgMcalEth.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalEth.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgMcalEth.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalEth.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalEth.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalEth.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalEth.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalEth.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_McalEth";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalEth.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_McalEth.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalEth.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalEth.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalEth.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalEth.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalEth.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalEth.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalEth.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalEth.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalEth.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalEth.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalEth.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalEth.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalEth.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalEth.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalEth.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalEth.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgEcuabEthIf";
-      printf("\nCfgGen_ServiceNvM.CfgEcuabEthIf.bDevErrorDetect                       = %d", CfgGen_ServiceNvM.CfgEcuabEthIf.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabEthIf.VersionInfo.u8ArVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabEthIf.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabEthIf.VersionInfo.u8ArVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabEthIf.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabEthIf.VersionInfo.u8IDVendor                = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabEthIf.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabEthIf.VersionInfo.u8IDModule                = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabEthIf.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabEthIf.VersionInfo.u8IDInstance              = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabEthIf.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabEthIf.VersionInfo.u8SwVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabEthIf.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabEthIf.VersionInfo.u8SwVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabEthIf.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabEthIf.VersionInfo.u8SwVersionPatch          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabEthIf.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_EcuabEthIf";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabEthIf.bDevErrorDetect                       = %d", NvM_BlocksNvRam.NvM_BlocksNv_EcuabEthIf.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabEthIf.VersionInfo.u8ArVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabEthIf.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabEthIf.VersionInfo.u8ArVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabEthIf.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabEthIf.VersionInfo.u8IDVendor                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabEthIf.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabEthIf.VersionInfo.u8IDModule                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabEthIf.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabEthIf.VersionInfo.u8IDInstance              = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabEthIf.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabEthIf.VersionInfo.u8SwVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabEthIf.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabEthIf.VersionInfo.u8SwVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabEthIf.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabEthIf.VersionInfo.u8SwVersionPatch          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabEthIf.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgEcuabFee";
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFee.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgEcuabFee.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFee.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFee.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFee.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFee.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFee.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFee.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFee.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFee.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFee.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFee.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFee.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFee.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFee.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFee.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFee.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFee.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_EcuabFee";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFee.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFee.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFee.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFee.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFee.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFee.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFee.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFee.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFee.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFee.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFee.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFee.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFee.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFee.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFee.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFee.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFee.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFee.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceFiM";
-      printf("\nCfgGen_ServiceNvM.CfgServiceFiM.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgServiceFiM.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceFiM.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceFiM.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceFiM.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceFiM.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceFiM.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceFiM.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceFiM.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceFiM.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceFiM.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceFiM.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceFiM.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceFiM.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceFiM.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceFiM.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceFiM.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceFiM.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceFiM";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceFiM.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceFiM.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceFiM.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceFiM.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceFiM.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceFiM.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceFiM.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceFiM.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceFiM.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceFiM.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceFiM.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceFiM.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceFiM.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceFiM.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceFiM.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceFiM.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceFiM.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceFiM.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgMcalFls";
-      printf("\nCfgGen_ServiceNvM.CfgMcalFls.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgMcalFls.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgMcalFls.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalFls.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalFls.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalFls.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalFls.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalFls.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalFls.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalFls.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgMcalFls.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalFls.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgMcalFls.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalFls.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalFls.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalFls.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalFls.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalFls.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_McalFls";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalFls.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_McalFls.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalFls.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalFls.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalFls.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalFls.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalFls.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalFls.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalFls.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalFls.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalFls.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalFls.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalFls.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalFls.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalFls.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalFls.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalFls.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalFls.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgMcalFr";
-      printf("\nCfgGen_ServiceNvM.CfgMcalFr.bDevErrorDetect                          = %d", CfgGen_ServiceNvM.CfgMcalFr.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgMcalFr.VersionInfo.u8ArVersionMajor             = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalFr.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalFr.VersionInfo.u8ArVersionMinor             = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalFr.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalFr.VersionInfo.u8IDVendor                   = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalFr.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalFr.VersionInfo.u8IDModule                   = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalFr.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgMcalFr.VersionInfo.u8IDInstance                 = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalFr.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgMcalFr.VersionInfo.u8SwVersionMajor             = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalFr.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalFr.VersionInfo.u8SwVersionMinor             = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalFr.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalFr.VersionInfo.u8SwVersionPatch             = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalFr.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_McalFr";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalFr.bDevErrorDetect                          = %d", NvM_BlocksNvRam.NvM_BlocksNv_McalFr.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalFr.VersionInfo.u8ArVersionMajor             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalFr.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalFr.VersionInfo.u8ArVersionMinor             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalFr.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalFr.VersionInfo.u8IDVendor                   = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalFr.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalFr.VersionInfo.u8IDModule                   = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalFr.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalFr.VersionInfo.u8IDInstance                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalFr.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalFr.VersionInfo.u8SwVersionMajor             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalFr.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalFr.VersionInfo.u8SwVersionMinor             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalFr.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalFr.VersionInfo.u8SwVersionPatch             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalFr.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgEcuabFrIf";
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFrIf.bDevErrorDetect                        = %d", CfgGen_ServiceNvM.CfgEcuabFrIf.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFrIf.VersionInfo.u8ArVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFrIf.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFrIf.VersionInfo.u8ArVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFrIf.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFrIf.VersionInfo.u8IDVendor                 = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFrIf.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFrIf.VersionInfo.u8IDModule                 = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFrIf.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFrIf.VersionInfo.u8IDInstance               = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFrIf.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFrIf.VersionInfo.u8SwVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFrIf.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFrIf.VersionInfo.u8SwVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFrIf.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFrIf.VersionInfo.u8SwVersionPatch           = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFrIf.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_EcuabFrIf";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFrIf.bDevErrorDetect                        = %d", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFrIf.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFrIf.VersionInfo.u8ArVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFrIf.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFrIf.VersionInfo.u8ArVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFrIf.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFrIf.VersionInfo.u8IDVendor                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFrIf.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFrIf.VersionInfo.u8IDModule                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFrIf.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFrIf.VersionInfo.u8IDInstance               = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFrIf.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFrIf.VersionInfo.u8SwVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFrIf.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFrIf.VersionInfo.u8SwVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFrIf.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFrIf.VersionInfo.u8SwVersionPatch           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFrIf.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceFrNm";
-      printf("\nCfgGen_ServiceNvM.CfgServiceFrNm.bDevErrorDetect                        = %d", CfgGen_ServiceNvM.CfgServiceFrNm.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceFrNm.VersionInfo.u8ArVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceFrNm.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceFrNm.VersionInfo.u8ArVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceFrNm.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceFrNm.VersionInfo.u8IDVendor                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceFrNm.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceFrNm.VersionInfo.u8IDModule                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceFrNm.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceFrNm.VersionInfo.u8IDInstance               = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceFrNm.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceFrNm.VersionInfo.u8SwVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceFrNm.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceFrNm.VersionInfo.u8SwVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceFrNm.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceFrNm.VersionInfo.u8SwVersionPatch           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceFrNm.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceFrNm";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceFrNm.bDevErrorDetect                        = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceFrNm.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceFrNm.VersionInfo.u8ArVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceFrNm.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceFrNm.VersionInfo.u8ArVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceFrNm.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceFrNm.VersionInfo.u8IDVendor                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceFrNm.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceFrNm.VersionInfo.u8IDModule                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceFrNm.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceFrNm.VersionInfo.u8IDInstance               = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceFrNm.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceFrNm.VersionInfo.u8SwVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceFrNm.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceFrNm.VersionInfo.u8SwVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceFrNm.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceFrNm.VersionInfo.u8SwVersionPatch           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceFrNm.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgEcuabFrTp";
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFrTp.bDevErrorDetect                        = %d", CfgGen_ServiceNvM.CfgEcuabFrTp.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFrTp.VersionInfo.u8ArVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFrTp.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFrTp.VersionInfo.u8ArVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFrTp.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFrTp.VersionInfo.u8IDVendor                 = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFrTp.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFrTp.VersionInfo.u8IDModule                 = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFrTp.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFrTp.VersionInfo.u8IDInstance               = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFrTp.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFrTp.VersionInfo.u8SwVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFrTp.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFrTp.VersionInfo.u8SwVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFrTp.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabFrTp.VersionInfo.u8SwVersionPatch           = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabFrTp.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_EcuabFrTp";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFrTp.bDevErrorDetect                        = %d", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFrTp.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFrTp.VersionInfo.u8ArVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFrTp.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFrTp.VersionInfo.u8ArVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFrTp.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFrTp.VersionInfo.u8IDVendor                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFrTp.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFrTp.VersionInfo.u8IDModule                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFrTp.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFrTp.VersionInfo.u8IDInstance               = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFrTp.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFrTp.VersionInfo.u8SwVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFrTp.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFrTp.VersionInfo.u8SwVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFrTp.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabFrTp.VersionInfo.u8SwVersionPatch           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabFrTp.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgMcalGpt";
-      printf("\nCfgGen_ServiceNvM.CfgMcalGpt.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgMcalGpt.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgMcalGpt.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalGpt.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalGpt.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalGpt.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalGpt.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalGpt.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalGpt.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalGpt.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgMcalGpt.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalGpt.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgMcalGpt.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalGpt.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalGpt.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalGpt.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalGpt.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalGpt.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_McalGpt";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalGpt.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_McalGpt.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalGpt.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalGpt.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalGpt.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalGpt.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalGpt.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalGpt.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalGpt.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalGpt.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalGpt.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalGpt.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalGpt.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalGpt.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalGpt.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalGpt.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalGpt.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalGpt.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgMcalIcu";
-      printf("\nCfgGen_ServiceNvM.CfgMcalIcu.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgMcalIcu.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgMcalIcu.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalIcu.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalIcu.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalIcu.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalIcu.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalIcu.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalIcu.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalIcu.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgMcalIcu.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalIcu.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgMcalIcu.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalIcu.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalIcu.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalIcu.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalIcu.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalIcu.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_McalIcu";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalIcu.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_McalIcu.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalIcu.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalIcu.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalIcu.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalIcu.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalIcu.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalIcu.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalIcu.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalIcu.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalIcu.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalIcu.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalIcu.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalIcu.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalIcu.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalIcu.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalIcu.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalIcu.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceIpduM";
-      printf("\nCfgGen_ServiceNvM.CfgServiceIpduM.bDevErrorDetect                       = %d", CfgGen_ServiceNvM.CfgServiceIpduM.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceIpduM.VersionInfo.u8ArVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceIpduM.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceIpduM.VersionInfo.u8ArVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceIpduM.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceIpduM.VersionInfo.u8IDVendor                = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceIpduM.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceIpduM.VersionInfo.u8IDModule                = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceIpduM.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceIpduM.VersionInfo.u8IDInstance              = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceIpduM.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceIpduM.VersionInfo.u8SwVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceIpduM.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceIpduM.VersionInfo.u8SwVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceIpduM.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceIpduM.VersionInfo.u8SwVersionPatch          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceIpduM.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceIpduM";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceIpduM.bDevErrorDetect                       = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceIpduM.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceIpduM.VersionInfo.u8ArVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceIpduM.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceIpduM.VersionInfo.u8ArVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceIpduM.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceIpduM.VersionInfo.u8IDVendor                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceIpduM.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceIpduM.VersionInfo.u8IDModule                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceIpduM.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceIpduM.VersionInfo.u8IDInstance              = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceIpduM.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceIpduM.VersionInfo.u8SwVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceIpduM.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceIpduM.VersionInfo.u8SwVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceIpduM.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceIpduM.VersionInfo.u8SwVersionPatch          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceIpduM.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgEcuabJ1939Tp";
-      printf("\nCfgGen_ServiceNvM.CfgEcuabJ1939Tp.bDevErrorDetect                     = %d", CfgGen_ServiceNvM.CfgEcuabJ1939Tp.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabJ1939Tp.VersionInfo.u8ArVersionMajor        = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabJ1939Tp.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabJ1939Tp.VersionInfo.u8ArVersionMinor        = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabJ1939Tp.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabJ1939Tp.VersionInfo.u8IDVendor              = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabJ1939Tp.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabJ1939Tp.VersionInfo.u8IDModule              = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabJ1939Tp.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabJ1939Tp.VersionInfo.u8IDInstance            = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabJ1939Tp.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabJ1939Tp.VersionInfo.u8SwVersionMajor        = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabJ1939Tp.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabJ1939Tp.VersionInfo.u8SwVersionMinor        = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabJ1939Tp.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabJ1939Tp.VersionInfo.u8SwVersionPatch        = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabJ1939Tp.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_EcuabJ1939Tp";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabJ1939Tp.bDevErrorDetect                     = %d", NvM_BlocksNvRam.NvM_BlocksNv_EcuabJ1939Tp.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabJ1939Tp.VersionInfo.u8ArVersionMajor        = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabJ1939Tp.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabJ1939Tp.VersionInfo.u8ArVersionMinor        = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabJ1939Tp.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabJ1939Tp.VersionInfo.u8IDVendor              = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabJ1939Tp.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabJ1939Tp.VersionInfo.u8IDModule              = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabJ1939Tp.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabJ1939Tp.VersionInfo.u8IDInstance            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabJ1939Tp.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabJ1939Tp.VersionInfo.u8SwVersionMajor        = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabJ1939Tp.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabJ1939Tp.VersionInfo.u8SwVersionMinor        = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabJ1939Tp.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabJ1939Tp.VersionInfo.u8SwVersionPatch        = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabJ1939Tp.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgMcalLin";
-      printf("\nCfgGen_ServiceNvM.CfgMcalLin.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgMcalLin.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgMcalLin.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalLin.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalLin.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalLin.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalLin.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalLin.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalLin.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalLin.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgMcalLin.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalLin.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgMcalLin.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalLin.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalLin.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalLin.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalLin.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalLin.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_McalLin";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalLin.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_McalLin.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalLin.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalLin.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalLin.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalLin.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalLin.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalLin.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalLin.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalLin.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalLin.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalLin.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalLin.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalLin.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalLin.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalLin.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalLin.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalLin.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgEcuabLinIf";
-      printf("\nCfgGen_ServiceNvM.CfgEcuabLinIf.bDevErrorDetect                       = %d", CfgGen_ServiceNvM.CfgEcuabLinIf.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabLinIf.VersionInfo.u8ArVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabLinIf.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabLinIf.VersionInfo.u8ArVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabLinIf.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabLinIf.VersionInfo.u8IDVendor                = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabLinIf.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabLinIf.VersionInfo.u8IDModule                = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabLinIf.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabLinIf.VersionInfo.u8IDInstance              = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabLinIf.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabLinIf.VersionInfo.u8SwVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabLinIf.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabLinIf.VersionInfo.u8SwVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabLinIf.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabLinIf.VersionInfo.u8SwVersionPatch          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabLinIf.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_EcuabLinIf";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabLinIf.bDevErrorDetect                       = %d", NvM_BlocksNvRam.NvM_BlocksNv_EcuabLinIf.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabLinIf.VersionInfo.u8ArVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabLinIf.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabLinIf.VersionInfo.u8ArVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabLinIf.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabLinIf.VersionInfo.u8IDVendor                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabLinIf.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabLinIf.VersionInfo.u8IDModule                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabLinIf.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabLinIf.VersionInfo.u8IDInstance              = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabLinIf.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabLinIf.VersionInfo.u8SwVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabLinIf.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabLinIf.VersionInfo.u8SwVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabLinIf.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabLinIf.VersionInfo.u8SwVersionPatch          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabLinIf.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgEcuabLinTp";
-      printf("\nCfgGen_ServiceNvM.CfgEcuabLinTp.bDevErrorDetect                       = %d", CfgGen_ServiceNvM.CfgEcuabLinTp.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabLinTp.VersionInfo.u8ArVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabLinTp.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabLinTp.VersionInfo.u8ArVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabLinTp.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabLinTp.VersionInfo.u8IDVendor                = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabLinTp.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabLinTp.VersionInfo.u8IDModule                = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabLinTp.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabLinTp.VersionInfo.u8IDInstance              = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabLinTp.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabLinTp.VersionInfo.u8SwVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabLinTp.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabLinTp.VersionInfo.u8SwVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabLinTp.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabLinTp.VersionInfo.u8SwVersionPatch          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabLinTp.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_EcuabLinTp";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabLinTp.bDevErrorDetect                       = %d", NvM_BlocksNvRam.NvM_BlocksNv_EcuabLinTp.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabLinTp.VersionInfo.u8ArVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabLinTp.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabLinTp.VersionInfo.u8ArVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabLinTp.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabLinTp.VersionInfo.u8IDVendor                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabLinTp.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabLinTp.VersionInfo.u8IDModule                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabLinTp.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabLinTp.VersionInfo.u8IDInstance              = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabLinTp.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabLinTp.VersionInfo.u8SwVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabLinTp.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabLinTp.VersionInfo.u8SwVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabLinTp.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabLinTp.VersionInfo.u8SwVersionPatch          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabLinTp.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgMcalMcu";
-      printf("\nCfgGen_ServiceNvM.CfgMcalMcu.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgMcalMcu.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgMcalMcu.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalMcu.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalMcu.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalMcu.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalMcu.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalMcu.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalMcu.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalMcu.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgMcalMcu.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalMcu.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgMcalMcu.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalMcu.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalMcu.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalMcu.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalMcu.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalMcu.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_McalMcu";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalMcu.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_McalMcu.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalMcu.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalMcu.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalMcu.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalMcu.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalMcu.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalMcu.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalMcu.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalMcu.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalMcu.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalMcu.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalMcu.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalMcu.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalMcu.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalMcu.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalMcu.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalMcu.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgEcuabMemIf";
-      printf("\nCfgGen_ServiceNvM.CfgEcuabMemIf.bDevErrorDetect                       = %d", CfgGen_ServiceNvM.CfgEcuabMemIf.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabMemIf.VersionInfo.u8ArVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabMemIf.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabMemIf.VersionInfo.u8ArVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabMemIf.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabMemIf.VersionInfo.u8IDVendor                = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabMemIf.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabMemIf.VersionInfo.u8IDModule                = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabMemIf.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabMemIf.VersionInfo.u8IDInstance              = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabMemIf.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabMemIf.VersionInfo.u8SwVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabMemIf.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabMemIf.VersionInfo.u8SwVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabMemIf.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabMemIf.VersionInfo.u8SwVersionPatch          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabMemIf.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_EcuabMemIf";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabMemIf.bDevErrorDetect                       = %d", NvM_BlocksNvRam.NvM_BlocksNv_EcuabMemIf.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabMemIf.VersionInfo.u8ArVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabMemIf.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabMemIf.VersionInfo.u8ArVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabMemIf.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabMemIf.VersionInfo.u8IDVendor                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabMemIf.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabMemIf.VersionInfo.u8IDModule                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabMemIf.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabMemIf.VersionInfo.u8IDInstance              = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabMemIf.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabMemIf.VersionInfo.u8SwVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabMemIf.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabMemIf.VersionInfo.u8SwVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabMemIf.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabMemIf.VersionInfo.u8SwVersionPatch          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabMemIf.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceNm";
-      printf("\nCfgGen_ServiceNvM.CfgServiceNm.bDevErrorDetect                          = %d", CfgGen_ServiceNvM.CfgServiceNm.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceNm.VersionInfo.u8ArVersionMajor             = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceNm.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceNm.VersionInfo.u8ArVersionMinor             = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceNm.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceNm.VersionInfo.u8IDVendor                   = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceNm.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceNm.VersionInfo.u8IDModule                   = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceNm.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceNm.VersionInfo.u8IDInstance                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceNm.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceNm.VersionInfo.u8SwVersionMajor             = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceNm.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceNm.VersionInfo.u8SwVersionMinor             = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceNm.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceNm.VersionInfo.u8SwVersionPatch             = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceNm.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceNm";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceNm.bDevErrorDetect                          = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceNm.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceNm.VersionInfo.u8ArVersionMajor             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceNm.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceNm.VersionInfo.u8ArVersionMinor             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceNm.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceNm.VersionInfo.u8IDVendor                   = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceNm.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceNm.VersionInfo.u8IDModule                   = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceNm.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceNm.VersionInfo.u8IDInstance                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceNm.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceNm.VersionInfo.u8SwVersionMajor             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceNm.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceNm.VersionInfo.u8SwVersionMinor             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceNm.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceNm.VersionInfo.u8SwVersionPatch             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceNm.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceNvM";
-      printf("\nCfgGen_ServiceNvM.CfgServiceNvM.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgServiceNvM.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceNvM.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceNvM.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceNvM.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceNvM.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceNvM.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceNvM.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceNvM.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceNvM.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceNvM.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceNvM.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceNvM.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceNvM.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceNvM.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceNvM.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceNvM.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceNvM.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceNvM";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceNvM.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceNvM.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceNvM.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceNvM.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceNvM.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceNvM.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceNvM.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceNvM.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceNvM.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceNvM.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceNvM.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceNvM.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceNvM.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceNvM.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceNvM.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceNvM.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceNvM.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceNvM.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgMcalOcu";
-      printf("\nCfgGen_ServiceNvM.CfgMcalOcu.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgMcalOcu.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgMcalOcu.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalOcu.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalOcu.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalOcu.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalOcu.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalOcu.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalOcu.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalOcu.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgMcalOcu.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalOcu.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgMcalOcu.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalOcu.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalOcu.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalOcu.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalOcu.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalOcu.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_McalOcu";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalOcu.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_McalOcu.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalOcu.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalOcu.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalOcu.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalOcu.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalOcu.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalOcu.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalOcu.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalOcu.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalOcu.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalOcu.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalOcu.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalOcu.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalOcu.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalOcu.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalOcu.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalOcu.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceOs";
-      printf("\nCfgGen_ServiceNvM.CfgServiceOs.bDevErrorDetect                          = %d", CfgGen_ServiceNvM.CfgServiceOs.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceOs.VersionInfo.u8ArVersionMajor             = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceOs.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceOs.VersionInfo.u8ArVersionMinor             = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceOs.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceOs.VersionInfo.u8IDVendor                   = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceOs.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceOs.VersionInfo.u8IDModule                   = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceOs.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceOs.VersionInfo.u8IDInstance                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceOs.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceOs.VersionInfo.u8SwVersionMajor             = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceOs.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceOs.VersionInfo.u8SwVersionMinor             = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceOs.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceOs.VersionInfo.u8SwVersionPatch             = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceOs.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceOs";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceOs.bDevErrorDetect                          = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceOs.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceOs.VersionInfo.u8ArVersionMajor             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceOs.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceOs.VersionInfo.u8ArVersionMinor             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceOs.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceOs.VersionInfo.u8IDVendor                   = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceOs.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceOs.VersionInfo.u8IDModule                   = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceOs.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceOs.VersionInfo.u8IDInstance                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceOs.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceOs.VersionInfo.u8SwVersionMajor             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceOs.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceOs.VersionInfo.u8SwVersionMinor             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceOs.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceOs.VersionInfo.u8SwVersionPatch             = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceOs.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgMcalPort";
-      printf("\nCfgGen_ServiceNvM.CfgMcalPort.bDevErrorDetect                        = %d", CfgGen_ServiceNvM.CfgMcalPort.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgMcalPort.VersionInfo.u8ArVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalPort.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalPort.VersionInfo.u8ArVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalPort.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalPort.VersionInfo.u8IDVendor                 = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalPort.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalPort.VersionInfo.u8IDModule                 = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalPort.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgMcalPort.VersionInfo.u8IDInstance               = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalPort.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgMcalPort.VersionInfo.u8SwVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalPort.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalPort.VersionInfo.u8SwVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalPort.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalPort.VersionInfo.u8SwVersionPatch           = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalPort.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_McalPort";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalPort.bDevErrorDetect                        = %d", NvM_BlocksNvRam.NvM_BlocksNv_McalPort.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalPort.VersionInfo.u8ArVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalPort.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalPort.VersionInfo.u8ArVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalPort.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalPort.VersionInfo.u8IDVendor                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalPort.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalPort.VersionInfo.u8IDModule                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalPort.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalPort.VersionInfo.u8IDInstance               = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalPort.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalPort.VersionInfo.u8SwVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalPort.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalPort.VersionInfo.u8SwVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalPort.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalPort.VersionInfo.u8SwVersionPatch           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalPort.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgMcalPwm";
-      printf("\nCfgGen_ServiceNvM.CfgMcalPwm.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgMcalPwm.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalPwm.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_McalPwm";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalPwm.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_McalPwm.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalPwm.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalPwm.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalPwm.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalPwm.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalPwm.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalPwm.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalPwm.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalPwm.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalPwm.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalPwm.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalPwm.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalPwm.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalPwm.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalPwm.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalPwm.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalPwm.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgProjectARA";
-      printf("\nCfgGen_ServiceNvM.CfgProjectARA.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgProjectARA.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgProjectARA.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ProjectARA";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ProjectARA.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_ProjectARA.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ProjectARA.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ProjectARA.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ProjectARA.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ProjectARA.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ProjectARA.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ProjectARA.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ProjectARA.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ProjectARA.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ProjectARA.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ProjectARA.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ProjectARA.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ProjectARA.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ProjectARA.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ProjectARA.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ProjectARA.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ProjectARA.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceSchM";
-      printf("\nCfgGen_ServiceNvM.CfgServiceSchM.bDevErrorDetect                        = %d", CfgGen_ServiceNvM.CfgServiceSchM.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSchM.VersionInfo.u8ArVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSchM.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSchM.VersionInfo.u8ArVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSchM.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSchM.VersionInfo.u8IDVendor                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSchM.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSchM.VersionInfo.u8IDModule                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSchM.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSchM.VersionInfo.u8IDInstance               = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSchM.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSchM.VersionInfo.u8SwVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSchM.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSchM.VersionInfo.u8SwVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSchM.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSchM.VersionInfo.u8SwVersionPatch           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSchM.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceSchM";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSchM.bDevErrorDetect                        = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSchM.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSchM.VersionInfo.u8ArVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSchM.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSchM.VersionInfo.u8ArVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSchM.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSchM.VersionInfo.u8IDVendor                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSchM.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSchM.VersionInfo.u8IDModule                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSchM.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSchM.VersionInfo.u8IDInstance               = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSchM.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSchM.VersionInfo.u8SwVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSchM.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSchM.VersionInfo.u8SwVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSchM.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSchM.VersionInfo.u8SwVersionPatch           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSchM.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceSecOC";
-      printf("\nCfgGen_ServiceNvM.CfgServiceSecOC.bDevErrorDetect                       = %d", CfgGen_ServiceNvM.CfgServiceSecOC.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSecOC.VersionInfo.u8ArVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSecOC.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSecOC.VersionInfo.u8ArVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSecOC.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSecOC.VersionInfo.u8IDVendor                = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSecOC.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSecOC.VersionInfo.u8IDModule                = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSecOC.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSecOC.VersionInfo.u8IDInstance              = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSecOC.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSecOC.VersionInfo.u8SwVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSecOC.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSecOC.VersionInfo.u8SwVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSecOC.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSecOC.VersionInfo.u8SwVersionPatch          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSecOC.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceSecOC";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSecOC.bDevErrorDetect                       = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSecOC.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSecOC.VersionInfo.u8ArVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSecOC.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSecOC.VersionInfo.u8ArVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSecOC.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSecOC.VersionInfo.u8IDVendor                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSecOC.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSecOC.VersionInfo.u8IDModule                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSecOC.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSecOC.VersionInfo.u8IDInstance              = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSecOC.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSecOC.VersionInfo.u8SwVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSecOC.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSecOC.VersionInfo.u8SwVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSecOC.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSecOC.VersionInfo.u8SwVersionPatch          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSecOC.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceSokFm";
-      printf("\nCfgGen_ServiceNvM.CfgServiceSokFm.bDevErrorDetect                       = %d", CfgGen_ServiceNvM.CfgServiceSokFm.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSokFm.VersionInfo.u8ArVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSokFm.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSokFm.VersionInfo.u8ArVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSokFm.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSokFm.VersionInfo.u8IDVendor                = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSokFm.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSokFm.VersionInfo.u8IDModule                = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSokFm.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSokFm.VersionInfo.u8IDInstance              = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSokFm.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSokFm.VersionInfo.u8SwVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSokFm.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSokFm.VersionInfo.u8SwVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSokFm.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSokFm.VersionInfo.u8SwVersionPatch          = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSokFm.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceSokFm";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSokFm.bDevErrorDetect                       = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSokFm.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSokFm.VersionInfo.u8ArVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSokFm.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSokFm.VersionInfo.u8ArVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSokFm.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSokFm.VersionInfo.u8IDVendor                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSokFm.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSokFm.VersionInfo.u8IDModule                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSokFm.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSokFm.VersionInfo.u8IDInstance              = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSokFm.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSokFm.VersionInfo.u8SwVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSokFm.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSokFm.VersionInfo.u8SwVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSokFm.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSokFm.VersionInfo.u8SwVersionPatch          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSokFm.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgMcalSpi";
-      printf("\nCfgGen_ServiceNvM.CfgMcalSpi.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgMcalSpi.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgMcalSpi.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalSpi.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalSpi.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalSpi.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalSpi.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalSpi.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalSpi.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalSpi.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgMcalSpi.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalSpi.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgMcalSpi.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalSpi.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalSpi.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalSpi.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalSpi.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalSpi.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_McalSpi";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalSpi.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_McalSpi.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalSpi.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalSpi.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalSpi.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalSpi.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalSpi.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalSpi.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalSpi.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalSpi.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalSpi.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalSpi.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalSpi.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalSpi.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalSpi.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalSpi.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalSpi.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalSpi.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceStartUp";
-      printf("\nCfgGen_ServiceNvM.CfgServiceStartUp.bDevErrorDetect                     = %d", CfgGen_ServiceNvM.CfgServiceStartUp.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceStartUp.VersionInfo.u8ArVersionMajor        = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceStartUp.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceStartUp.VersionInfo.u8ArVersionMinor        = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceStartUp.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceStartUp.VersionInfo.u8IDVendor              = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceStartUp.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceStartUp.VersionInfo.u8IDModule              = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceStartUp.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceStartUp.VersionInfo.u8IDInstance            = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceStartUp.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceStartUp.VersionInfo.u8SwVersionMajor        = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceStartUp.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceStartUp.VersionInfo.u8SwVersionMinor        = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceStartUp.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceStartUp.VersionInfo.u8SwVersionPatch        = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceStartUp.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceStartUp";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceStartUp.bDevErrorDetect                     = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceStartUp.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceStartUp.VersionInfo.u8ArVersionMajor        = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceStartUp.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceStartUp.VersionInfo.u8ArVersionMinor        = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceStartUp.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceStartUp.VersionInfo.u8IDVendor              = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceStartUp.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceStartUp.VersionInfo.u8IDModule              = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceStartUp.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceStartUp.VersionInfo.u8IDInstance            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceStartUp.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceStartUp.VersionInfo.u8SwVersionMajor        = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceStartUp.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceStartUp.VersionInfo.u8SwVersionMinor        = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceStartUp.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceStartUp.VersionInfo.u8SwVersionPatch        = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceStartUp.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceStbM";
-      printf("\nCfgGen_ServiceNvM.CfgServiceStbM.bDevErrorDetect                        = %d", CfgGen_ServiceNvM.CfgServiceStbM.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceStbM.VersionInfo.u8ArVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceStbM.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceStbM.VersionInfo.u8ArVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceStbM.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceStbM.VersionInfo.u8IDVendor                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceStbM.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceStbM.VersionInfo.u8IDModule                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceStbM.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceStbM.VersionInfo.u8IDInstance               = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceStbM.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceStbM.VersionInfo.u8SwVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceStbM.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceStbM.VersionInfo.u8SwVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceStbM.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceStbM.VersionInfo.u8SwVersionPatch           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceStbM.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceStbM";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceStbM.bDevErrorDetect                        = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceStbM.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceStbM.VersionInfo.u8ArVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceStbM.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceStbM.VersionInfo.u8ArVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceStbM.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceStbM.VersionInfo.u8IDVendor                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceStbM.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceStbM.VersionInfo.u8IDModule                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceStbM.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceStbM.VersionInfo.u8IDInstance               = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceStbM.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceStbM.VersionInfo.u8SwVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceStbM.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceStbM.VersionInfo.u8SwVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceStbM.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceStbM.VersionInfo.u8SwVersionPatch           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceStbM.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgApplSwcFoc";
-      printf("\nCfgGen_ServiceNvM.CfgApplSwcFoc.bDevErrorDetect                  = %d", CfgGen_ServiceNvM.CfgApplSwcFoc.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgApplSwcFoc.VersionInfo.u8ArVersionMajor     = 0x%2.2X", CfgGen_ServiceNvM.CfgApplSwcFoc.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgApplSwcFoc.VersionInfo.u8ArVersionMinor     = 0x%2.2X", CfgGen_ServiceNvM.CfgApplSwcFoc.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgApplSwcFoc.VersionInfo.u8IDVendor           = 0x%2.2X", CfgGen_ServiceNvM.CfgApplSwcFoc.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgApplSwcFoc.VersionInfo.u8IDModule           = 0x%2.2X", CfgGen_ServiceNvM.CfgApplSwcFoc.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgApplSwcFoc.VersionInfo.u8IDInstance         = 0x%2.2X", CfgGen_ServiceNvM.CfgApplSwcFoc.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgApplSwcFoc.VersionInfo.u8SwVersionMajor     = 0x%2.2X", CfgGen_ServiceNvM.CfgApplSwcFoc.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgApplSwcFoc.VersionInfo.u8SwVersionMinor     = 0x%2.2X", CfgGen_ServiceNvM.CfgApplSwcFoc.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgApplSwcFoc.VersionInfo.u8SwVersionPatch     = 0x%2.2X", CfgGen_ServiceNvM.CfgApplSwcFoc.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ApplSwcFoc";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ApplSwcFoc.bDevErrorDetect                  = %d", NvM_BlocksNvRam.NvM_BlocksNv_ApplSwcFoc.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ApplSwcFoc.VersionInfo.u8ArVersionMajor     = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ApplSwcFoc.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ApplSwcFoc.VersionInfo.u8ArVersionMinor     = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ApplSwcFoc.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ApplSwcFoc.VersionInfo.u8IDVendor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ApplSwcFoc.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ApplSwcFoc.VersionInfo.u8IDModule           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ApplSwcFoc.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ApplSwcFoc.VersionInfo.u8IDInstance         = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ApplSwcFoc.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ApplSwcFoc.VersionInfo.u8SwVersionMajor     = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ApplSwcFoc.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ApplSwcFoc.VersionInfo.u8SwVersionMinor     = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ApplSwcFoc.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ApplSwcFoc.VersionInfo.u8SwVersionPatch     = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ApplSwcFoc.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceSwcEcuM";
-      printf("\nCfgGen_ServiceNvM.CfgServiceSwcEcuM.bDevErrorDetect              = %d", CfgGen_ServiceNvM.CfgServiceSwcEcuM.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSwcEcuM.VersionInfo.u8ArVersionMajor = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSwcEcuM.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSwcEcuM.VersionInfo.u8ArVersionMinor = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSwcEcuM.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSwcEcuM.VersionInfo.u8IDVendor       = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSwcEcuM.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSwcEcuM.VersionInfo.u8IDModule       = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSwcEcuM.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSwcEcuM.VersionInfo.u8IDInstance     = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSwcEcuM.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSwcEcuM.VersionInfo.u8SwVersionMajor = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSwcEcuM.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSwcEcuM.VersionInfo.u8SwVersionMinor = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSwcEcuM.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSwcEcuM.VersionInfo.u8SwVersionPatch = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSwcEcuM.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceSwcEcuM";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcEcuM.bDevErrorDetect              = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcEcuM.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcEcuM.VersionInfo.u8ArVersionMajor = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcEcuM.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcEcuM.VersionInfo.u8ArVersionMinor = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcEcuM.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcEcuM.VersionInfo.u8IDVendor       = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcEcuM.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcEcuM.VersionInfo.u8IDModule       = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcEcuM.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcEcuM.VersionInfo.u8IDInstance     = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcEcuM.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcEcuM.VersionInfo.u8SwVersionMajor = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcEcuM.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcEcuM.VersionInfo.u8SwVersionMinor = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcEcuM.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcEcuM.VersionInfo.u8SwVersionPatch = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcEcuM.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceSwcOs";
-      printf("\nCfgGen_ServiceNvM.CfgServiceSwcOs.bDevErrorDetect                = %d", CfgGen_ServiceNvM.CfgServiceSwcOs.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSwcOs.VersionInfo.u8ArVersionMajor   = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSwcOs.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSwcOs.VersionInfo.u8ArVersionMinor   = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSwcOs.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSwcOs.VersionInfo.u8IDVendor         = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSwcOs.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSwcOs.VersionInfo.u8IDModule         = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSwcOs.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSwcOs.VersionInfo.u8IDInstance       = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSwcOs.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSwcOs.VersionInfo.u8SwVersionMajor   = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSwcOs.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSwcOs.VersionInfo.u8SwVersionMinor   = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSwcOs.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceSwcOs.VersionInfo.u8SwVersionPatch   = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceSwcOs.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceSwcOs";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcOs.bDevErrorDetect                = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcOs.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcOs.VersionInfo.u8ArVersionMajor   = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcOs.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcOs.VersionInfo.u8ArVersionMinor   = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcOs.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcOs.VersionInfo.u8IDVendor         = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcOs.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcOs.VersionInfo.u8IDModule         = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcOs.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcOs.VersionInfo.u8IDInstance       = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcOs.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcOs.VersionInfo.u8SwVersionMajor   = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcOs.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcOs.VersionInfo.u8SwVersionMinor   = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcOs.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcOs.VersionInfo.u8SwVersionPatch   = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceSwcOs.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceVkms";
-      printf("\nCfgGen_ServiceNvM.CfgServiceVkms.bDevErrorDetect                        = %d", CfgGen_ServiceNvM.CfgServiceVkms.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceVkms.VersionInfo.u8ArVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceVkms.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceVkms.VersionInfo.u8ArVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceVkms.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceVkms.VersionInfo.u8IDVendor                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceVkms.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceVkms.VersionInfo.u8IDModule                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceVkms.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceVkms.VersionInfo.u8IDInstance               = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceVkms.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceVkms.VersionInfo.u8SwVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceVkms.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceVkms.VersionInfo.u8SwVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceVkms.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceVkms.VersionInfo.u8SwVersionPatch           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceVkms.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceVkms";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceVkms.bDevErrorDetect                        = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceVkms.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceVkms.VersionInfo.u8ArVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceVkms.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceVkms.VersionInfo.u8ArVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceVkms.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceVkms.VersionInfo.u8IDVendor                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceVkms.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceVkms.VersionInfo.u8IDModule                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceVkms.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceVkms.VersionInfo.u8IDInstance               = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceVkms.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceVkms.VersionInfo.u8SwVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceVkms.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceVkms.VersionInfo.u8SwVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceVkms.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceVkms.VersionInfo.u8SwVersionPatch           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceVkms.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgMcalWdg";
-      printf("\nCfgGen_ServiceNvM.CfgMcalWdg.bDevErrorDetect                         = %d", CfgGen_ServiceNvM.CfgMcalWdg.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgMcalWdg.VersionInfo.u8ArVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalWdg.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalWdg.VersionInfo.u8ArVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalWdg.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalWdg.VersionInfo.u8IDVendor                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalWdg.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalWdg.VersionInfo.u8IDModule                  = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalWdg.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgMcalWdg.VersionInfo.u8IDInstance                = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalWdg.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgMcalWdg.VersionInfo.u8SwVersionMajor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalWdg.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalWdg.VersionInfo.u8SwVersionMinor            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalWdg.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgMcalWdg.VersionInfo.u8SwVersionPatch            = 0x%2.2X", CfgGen_ServiceNvM.CfgMcalWdg.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_McalWdg";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalWdg.bDevErrorDetect                         = %d", NvM_BlocksNvRam.NvM_BlocksNv_McalWdg.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalWdg.VersionInfo.u8ArVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalWdg.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalWdg.VersionInfo.u8ArVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalWdg.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalWdg.VersionInfo.u8IDVendor                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalWdg.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalWdg.VersionInfo.u8IDModule                  = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalWdg.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalWdg.VersionInfo.u8IDInstance                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalWdg.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalWdg.VersionInfo.u8SwVersionMajor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalWdg.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalWdg.VersionInfo.u8SwVersionMinor            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalWdg.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_McalWdg.VersionInfo.u8SwVersionPatch            = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_McalWdg.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgEcuabWdgIf";
-      printf("\nCfgGen_ServiceNvM.CfgEcuabWdgIf.bDevErrorDetect                       = %d", CfgGen_ServiceNvM.CfgEcuabWdgIf.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabWdgIf.VersionInfo.u8ArVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabWdgIf.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabWdgIf.VersionInfo.u8ArVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabWdgIf.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabWdgIf.VersionInfo.u8IDVendor                = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabWdgIf.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabWdgIf.VersionInfo.u8IDModule                = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabWdgIf.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabWdgIf.VersionInfo.u8IDInstance              = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabWdgIf.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabWdgIf.VersionInfo.u8SwVersionMajor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabWdgIf.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabWdgIf.VersionInfo.u8SwVersionMinor          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabWdgIf.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgEcuabWdgIf.VersionInfo.u8SwVersionPatch          = 0x%2.2X", CfgGen_ServiceNvM.CfgEcuabWdgIf.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_EcuabWdgIf";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabWdgIf.bDevErrorDetect                       = %d", NvM_BlocksNvRam.NvM_BlocksNv_EcuabWdgIf.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabWdgIf.VersionInfo.u8ArVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabWdgIf.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabWdgIf.VersionInfo.u8ArVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabWdgIf.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabWdgIf.VersionInfo.u8IDVendor                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabWdgIf.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabWdgIf.VersionInfo.u8IDModule                = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabWdgIf.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabWdgIf.VersionInfo.u8IDInstance              = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabWdgIf.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabWdgIf.VersionInfo.u8SwVersionMajor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabWdgIf.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabWdgIf.VersionInfo.u8SwVersionMinor          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabWdgIf.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_EcuabWdgIf.VersionInfo.u8SwVersionPatch          = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_EcuabWdgIf.VersionInfo.u8SwVersionPatch);
 
-      cout<<endl<<endl<<"CfgServiceWdgM";
-      printf("\nCfgGen_ServiceNvM.CfgServiceWdgM.bDevErrorDetect                        = %d", CfgGen_ServiceNvM.CfgServiceWdgM.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServiceWdgM.VersionInfo.u8ArVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceWdgM.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceWdgM.VersionInfo.u8ArVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceWdgM.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceWdgM.VersionInfo.u8IDVendor                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceWdgM.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceWdgM.VersionInfo.u8IDModule                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceWdgM.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServiceWdgM.VersionInfo.u8IDInstance               = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceWdgM.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServiceWdgM.VersionInfo.u8SwVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceWdgM.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceWdgM.VersionInfo.u8SwVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceWdgM.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServiceWdgM.VersionInfo.u8SwVersionPatch           = 0x%2.2X", CfgGen_ServiceNvM.CfgServiceWdgM.VersionInfo.u8SwVersionPatch);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServiceWdgM";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceWdgM.bDevErrorDetect                        = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServiceWdgM.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceWdgM.VersionInfo.u8ArVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceWdgM.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceWdgM.VersionInfo.u8ArVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceWdgM.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceWdgM.VersionInfo.u8IDVendor                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceWdgM.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceWdgM.VersionInfo.u8IDModule                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceWdgM.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceWdgM.VersionInfo.u8IDInstance               = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceWdgM.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceWdgM.VersionInfo.u8SwVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceWdgM.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceWdgM.VersionInfo.u8SwVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceWdgM.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServiceWdgM.VersionInfo.u8SwVersionPatch           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServiceWdgM.VersionInfo.u8SwVersionPatch);
 */
 /*
-      cout<<endl<<endl<<"CfgServicePduR";
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.bDevErrorDetect                        = %d", CfgGen_ServiceNvM.CfgServicePduR.bDevErrorDetect);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.VersionInfo.u8ArVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServicePduR.VersionInfo.u8ArVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.VersionInfo.u8ArVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServicePduR.VersionInfo.u8ArVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.VersionInfo.u8IDVendor                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServicePduR.VersionInfo.u8IDVendor);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.VersionInfo.u8IDModule                 = 0x%2.2X", CfgGen_ServiceNvM.CfgServicePduR.VersionInfo.u8IDModule);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.VersionInfo.u8IDInstance               = 0x%2.2X", CfgGen_ServiceNvM.CfgServicePduR.VersionInfo.u8IDInstance);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.VersionInfo.u8SwVersionMajor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServicePduR.VersionInfo.u8SwVersionMajor);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.VersionInfo.u8SwVersionMinor           = 0x%2.2X", CfgGen_ServiceNvM.CfgServicePduR.VersionInfo.u8SwVersionMinor);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.VersionInfo.u8SwVersionPatch           = 0x%2.2X", CfgGen_ServiceNvM.CfgServicePduR.VersionInfo.u8SwVersionPatch);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.Id                                = 0x%4.4X", CfgGen_ServiceNvM.CfgServicePduR.Core.Id);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bUpperModule            = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bUpperModule);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bLowerModule            = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bLowerModule);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCommunicationInterface = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCommunicationInterface);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTransportProtocol      = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTransportProtocol);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTransmit               = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTransmit);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTransmitTp             = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTransmitTp);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTxConfirmation         = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTxConfirmation);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTxConfirmationTp       = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTxConfirmationTp);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bRxIndication           = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bRxIndication);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bRxIndicationTp         = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bRxIndicationTp);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCancelTransmit         = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCancelTransmit);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCancelReceive          = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCancelReceive);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCopyTxData             = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCopyTxData);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCopyRxData             = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bCopyRxData);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTriggerTransmit        = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bTriggerTransmit);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bReTransmition          = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bReTransmition);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bStartOfReception       = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bStartOfReception);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bUseTag                 = %d", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrClients[0]->bUseTag);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.u16CntMaxRoutingPathGroup         = 0x%4.4X", CfgGen_ServiceNvM.CfgServicePduR.Core.u16CntMaxRoutingPathGroup);
-      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrGroups                        = 0x%p", (void*)CfgGen_ServiceNvM.CfgServicePduR.Core.aptrGroups);
+      cout<<endl<<endl<<"NvM_BlocksNv_ServicePduR";
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.bDevErrorDetect                        = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.bDevErrorDetect);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.VersionInfo.u8ArVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.VersionInfo.u8ArVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.VersionInfo.u8ArVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.VersionInfo.u8ArVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.VersionInfo.u8IDVendor                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.VersionInfo.u8IDVendor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.VersionInfo.u8IDModule                 = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.VersionInfo.u8IDModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.VersionInfo.u8IDInstance               = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.VersionInfo.u8IDInstance);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.VersionInfo.u8SwVersionMajor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.VersionInfo.u8SwVersionMajor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.VersionInfo.u8SwVersionMinor           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.VersionInfo.u8SwVersionMinor);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.VersionInfo.u8SwVersionPatch           = 0x%2.2X", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.VersionInfo.u8SwVersionPatch);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.Id                                = 0x%4.4X", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.Id);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bUpperModule            = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bUpperModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bLowerModule            = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bLowerModule);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bCommunicationInterface = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bCommunicationInterface);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bTransportProtocol      = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bTransportProtocol);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bTransmit               = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bTransmit);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bTransmitTp             = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bTransmitTp);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bTxConfirmation         = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bTxConfirmation);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bTxConfirmationTp       = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bTxConfirmationTp);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bRxIndication           = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bRxIndication);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bRxIndicationTp         = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bRxIndicationTp);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bCancelTransmit         = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bCancelTransmit);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bCancelReceive          = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bCancelReceive);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bCopyTxData             = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bCopyTxData);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bCopyRxData             = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bCopyRxData);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bTriggerTransmit        = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bTriggerTransmit);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bReTransmition          = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bReTransmition);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bStartOfReception       = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bStartOfReception);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bUseTag                 = %d", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrClients[0]->bUseTag);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.u16CntMaxRoutingPathGroup         = 0x%4.4X", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.u16CntMaxRoutingPathGroup);
+      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrGroups                        = 0x%p", (void*)NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrGroups);
 */
-//      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrGroups[0]->Id                   = 0x%4.4X", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrGroups[0]->Id);
-//      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrGroups[0]->u16CntMaxRoutingPath = 0x%4.4X", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrGroups[0]->u16CntMaxRoutingPath);
-//      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrGroups[0]->astGroup[0].ptrSrc   = 0x%p", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrGroups[0]->astGroup[0].ptrSrc);
-//      printf("\nCfgGen_ServiceNvM.CfgServicePduR.Core.aptrGroups[0]->astGroup[0].ptrDst   = 0x%p", CfgGen_ServiceNvM.CfgServicePduR.Core.aptrGroups[0]->astGroup[0].ptrDst);
+//      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrGroups[0]->Id                   = 0x%4.4X", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrGroups[0]->Id);
+//      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrGroups[0]->u16CntMaxRoutingPath = 0x%4.4X", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrGroups[0]->u16CntMaxRoutingPath);
+//      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrGroups[0]->astGroup[0].ptrSrc   = 0x%p", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrGroups[0]->astGroup[0].ptrSrc);
+//      printf("\nNvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrGroups[0]->astGroup[0].ptrDst   = 0x%p", NvM_BlocksNvRam.NvM_BlocksNv_ServicePduR.Core.aptrGroups[0]->astGroup[0].ptrDst);
 
 /*
-      cout<<endl<<endl<<"CfgGen_ServiceNvM";
+      cout<<endl<<endl<<"NvM_BlocksNvRam";
       for(
          uint16 u16IndexLoop = 0;
-                u16IndexLoop < sizeof(CfgGen_ServiceNvM);
+                u16IndexLoop < sizeof(NvM_BlocksNvRam);
                 u16IndexLoop ++
       ){
          if(0 == u16IndexLoop%18){
             printf("\n:");
          }
-         printf(" %2.2X", ((uint8*)&CfgGen_ServiceNvM)[u16IndexLoop]);
+         printf(" %2.2X", ((uint8*)&NvM_BlocksNvRam)[u16IndexLoop]);
       }
 */
 

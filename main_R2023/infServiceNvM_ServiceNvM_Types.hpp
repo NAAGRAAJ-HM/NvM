@@ -15,11 +15,13 @@
 class NvM_BlocksRom_ServiceNvM_Type:
       public ConstModule_TypeAbstract
 {
-/******************************************************************************/
-/* CONSTS                                                                     */
-/******************************************************************************/
    public:
       infEcuabMemIf_ServiceNvM* ptrinfEcuabMemIf_ServiceNvM;
+};
+
+class NvM_BlocksNv_ServiceNvM_Type:
+      public CfgModule_TypeAbstract
+{
 };
 
 /******************************************************************************/
