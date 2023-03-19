@@ -1,15 +1,13 @@
+#pragma once
 /******************************************************************************/
-/* File   : ServiceNvM.cpp                                                    */
+/* File   : infServiceSwcNvMServiceSwcEcuM.hpp                                */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "Std_Types.hpp"
-
-#include "ServiceNvM.hpp"
-#include "infServiceNvM_ServiceSwcEcuM.hpp"
+#include "CompilerCfg_ServiceSwcNvM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -24,6 +22,13 @@
 /******************************************************************************/
 
 /******************************************************************************/
+/* FUNCTIONS                                                                  */
+/******************************************************************************/
+extern FUNC(void, SERVICESWCNVM_CODE) infServiceSwcNvMServiceSwcEcuM_InitFunction   (void);
+extern FUNC(void, SERVICESWCNVM_CODE) infServiceSwcNvMServiceSwcEcuM_DeInitFunction (void);
+extern FUNC(void, SERVICESWCNVM_CODE) infServiceSwcNvMServiceSwcEcuM_ReadAll        (void);
+
+/******************************************************************************/
 /* CONSTS                                                                     */
 /******************************************************************************/
 
@@ -34,15 +39,6 @@
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-
-/******************************************************************************/
-/* FUNCTIONS                                                                  */
-/******************************************************************************/
-FUNC(void, SERVICENVM_CODE) ServiceNvM_InitFunction   (void){}
-FUNC(void, SERVICENVM_CODE) ServiceNvM_DeInitFunction (void){}
-FUNC(void, SERVICENVM_CODE) ServiceNvM_MainFunction   (void){}
-FUNC(void, SERVICENVM_CODE) ServiceNvM_ReadAll        (void){}
-
 
 /******************************************************************************/
 /* EOF                                                                        */
