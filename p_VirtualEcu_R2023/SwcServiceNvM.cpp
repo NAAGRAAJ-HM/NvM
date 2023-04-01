@@ -1,5 +1,5 @@
 /******************************************************************************/
-/* File   : ServiceSwcNvM.cpp                                                 */
+/* File   : SwcServiceNvM.cpp                                                 */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
@@ -8,9 +8,9 @@
 /******************************************************************************/
 #include "Std_Types.hpp"
 
-#include "ServiceSwcNvM.hpp"
+#include "SwcServiceNvM.hpp"
 
-#include "infServiceSwcNvMServiceSwcEcuM.hpp"
+#include "infSwcServiceNvMSwcServiceEcuM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -39,10 +39,10 @@
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-FUNC(void, SERVICESWCNVM_CODE) infServiceSwcNvMServiceSwcEcuM_InitFunction   (void){}
-FUNC(void, SERVICESWCNVM_CODE) infServiceSwcNvMServiceSwcEcuM_DeInitFunction (void){}
-FUNC(void, SERVICESWCNVM_CODE) infServiceSwcNvMServiceSwcEcuM_ReadAll        (void){}
-FUNC(void, SERVICESWCNVM_CODE) infServiceSwcNvMServiceSwcSchM_MainFunction   (void){}
+FUNC(void, SWCSERVICENVM_CODE) infSwcServiceNvMSwcServiceEcuM_InitFunction   (void){}
+FUNC(void, SWCSERVICENVM_CODE) infSwcServiceNvMSwcServiceEcuM_DeInitFunction (void){}
+FUNC(void, SWCSERVICENVM_CODE) infSwcServiceNvMSwcServiceEcuM_ReadAll        (void){}
+FUNC(void, SWCSERVICENVM_CODE) infSwcServiceNvMSwcServiceSchM_MainFunction   (void){}
 
 
 /******************************************************************************/
