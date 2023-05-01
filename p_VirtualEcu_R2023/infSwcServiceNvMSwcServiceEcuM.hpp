@@ -44,6 +44,7 @@
 extern FUNC(void, SWCSERVICENVM_CODE) infSwcServiceNvMSwcServiceEcuM_InitFunction   (void);
 extern FUNC(void, SWCSERVICENVM_CODE) infSwcServiceNvMSwcServiceEcuM_DeInitFunction (void);
 extern FUNC(void, SWCSERVICENVM_CODE) infSwcServiceNvMSwcServiceEcuM_ReadAll        (void);
+extern FUNC(void, SWCSERVICENVM_CODE) infSwcServiceNvMSwcServiceEcuM_WriteAll        (void);
 
 /******************************************************************************/
 /* CONSTS                                                                     */
