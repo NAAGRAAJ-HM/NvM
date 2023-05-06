@@ -59,7 +59,7 @@
 FUNC(void, SWCSERVICENVM_CODE) infSwcServiceNvMSwcServiceEcuM_InitFunction   (void){}
 FUNC(void, SWCSERVICENVM_CODE) infSwcServiceNvMSwcServiceEcuM_DeInitFunction (void){}
 FUNC(void, SWCSERVICENVM_CODE) infSwcServiceNvMSwcServiceEcuM_ReadAll        (void){}
-FUNC(void, SWCSERVICENVM_CODE) infSwcServiceNvMSwcServiceEcuM_WriteAll        (void){}
+FUNC(void, SWCSERVICENVM_CODE) infSwcServiceNvMSwcServiceEcuM_WriteAll       (void){}
 FUNC(void, SWCSERVICENVM_CODE) infSwcServiceNvMSwcServiceSchM_MainFunction   (void){}
 
 
