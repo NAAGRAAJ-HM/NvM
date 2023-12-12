@@ -3,7 +3,7 @@
 #if(!defined NVM_H_)
 #define NVM_H_
 
-#define NVM_VENDOR_ID              (30u)
+#define NVM_VENDOR_ID              (1u)
 #define NVM_MODULE_ID              (20u)
 
 #define NVM_AR_RELEASE_MAJOR_VERSION       (4u)
