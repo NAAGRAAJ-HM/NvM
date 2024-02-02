@@ -1,16 +1,12 @@
-
-
 #if(!defined NVM_H_)
 #define NVM_H_
 
-#define NVM_VENDOR_ID              (1u)
+#define NVM_VENDOR_ID              ( 1u)
 #define NVM_MODULE_ID              (20u)
 
 #define NVM_AR_RELEASE_MAJOR_VERSION       (4u)
 #define NVM_AR_RELEASE_MINOR_VERSION       (2u)
 #define NVM_AR_RELEASE_REVISION_VERSION    (2u)
-//#define NVM_AR_RELEASE_MINOR_VERSION       (0u)
-//#define NVM_AR_RELEASE_REVISION_VERSION    (3u)
 
 #define NVM_SW_MAJOR_VERSION       (5u)
 #define NVM_SW_MINOR_VERSION       (7u)
