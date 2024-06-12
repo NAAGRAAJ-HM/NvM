@@ -19,7 +19,6 @@ VAR(uint8, NVM_FAST_DATA) NvM_ApiFlags_u8;
 #define NVM_STOP_SEC_VAR_FAST_8
 #include "MemMap.hpp"
 
-
 #define NVM_START_SEC_CODE
 #include "MemMap.hpp"
 static boolean NvM_WriteProtectionChecks(const NvM_RamMngmtConstPtrType mngmtPtr);

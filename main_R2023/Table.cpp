@@ -1,23 +1,7 @@
 /******************************************************************************/
 /* File   : Table.cpp                                                         */
-/*                                                                            */
-/* Author : Nagaraja HULIYAPURADA MATA                                        */
-/*                                                                            */
-/* License / Warranty / Terms and Conditions                                  */
-/*                                                                            */
-/* Everyone is permitted to copy and distribute verbatim copies of this lice- */
-/* nse document, but changing it is not allowed. This is a free, copyright l- */
-/* icense for software and other kinds of works. By contrast, this license is */
-/* intended to guarantee your freedom to share and change all versions of a   */
-/* program, to make sure it remains free software for all its users. You have */
-/* certain responsibilities, if you distribute copies of the software, or if  */
-/* you modify it: responsibilities to respect the freedom of others.          */
-/*                                                                            */
-/* All rights reserved. Copyright © 1982 Nagaraja HULIYAPURADA MATA           */
-/*                                                                            */
-/* Always refer latest software version from:                                 */
-/* https://github.com/NagarajaHuliyapuradaMata?tab=repositories               */
-/*                                                                            */
+/* Author : Nagaraja HULIYAPURADA-MATA                                        */
+/* Date   : 01.02.1982                                                        */
 /******************************************************************************/
 
 /******************************************************************************/
@@ -509,8 +493,6 @@ const uint16 Table_sqrtmqu[] ={
    ,  63,     59,     55,     50,     45,     39,     32,     23
    ,  0
 };
-
-
 
 const uint16 Table_Sin60[] ={
                       0, Table_lScale(  134), Table_lScale(  268), Table_lScale(  402)
